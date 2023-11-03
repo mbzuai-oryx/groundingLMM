@@ -3,19 +3,20 @@
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
 </p>
 
-#### [Hanoona Rasheed](https://www.hanoonarasheed.com/)*, [Muhammad Maaz](https://www.muhammadmaaz.com)*, [Sahal Shaji](https://www.linkedin.com/in/sahalshajim), [Abdelrahman Shaker](https://amshaker.github.io), [Salman Khan](https://salman-h-khan.github.io/), [Hisham Cholakkal](https://scholar.google.ae/citations?user=bZ3YBRcAAAAJ&hl=fr), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en), [Eric Xing](https://www.cs.cmu.edu/~epxing), [Ming-Hsuan Yang](https://scholar.google.com.pk/citations?user=p9-ohHsAAAAJ&hl=en) and [Fahad Khan](https://sites.google.com/view/fahadkhans/home)
+#### [Hanoona Rasheed](https://www.hanoonarasheed.com/)\*, [Muhammad Maaz](https://www.muhammadmaaz.com)\*, [Sahal Shaji](https://www.linkedin.com/in/sahalshajim), [Abdelrahman Shaker](https://amshaker.github.io), [Salman Khan](https://salman-h-khan.github.io/), [Hisham Cholakkal](https://scholar.google.ae/citations?user=bZ3YBRcAAAAJ&hl=fr), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en), [Eric Xing](https://www.cs.cmu.edu/~epxing), [Ming-Hsuan Yang](https://scholar.google.com.pk/citations?user=p9-ohHsAAAAJ&hl=en) and [Fahad Khan](https://sites.google.com/view/fahadkhans/home)
 \* Equally contributing first authors
 
 #### **Mohamed bin Zayed University of Artificial Intelligence**
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://github.com/mbzuai-oryx/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](EDIT_HERE_PLEASE)
-[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](EDIT_HERE_PLEASE)
+[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/lTvi8BspR3o)
 
 ---
 
 ## 📢 Latest Updates
 - **Nov-03-23**: GLaMM paper is released [arxiv link](EDIT_HERE_PLEASE). 🔥🔥
+- 📦 Code, models, and datasets coming soon! 🚀
 
 ---
 
@@ -81,11 +82,11 @@ GranD-f is designed for the GCG task, with about 214K image-grounded text pairs 
 Introducing GCG, a task to create image-level captions tied to segmentation masks, enhancing the model’s visual grounding in natural language captioning.
 
 <p align="center">
-  <img src="images/glamm/results_7_gcg_combined.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_7_gcg_combined.png" alt="Results_GCG">
 </p>
 
 <p align="center">
-  <img src="images/tables/GCG_Table.png" alt="GranD-f Dataset Sample">
+  <img src="images/tables/GCG_Table.png" alt="GCG_Table">
 </p>
 
 ---
@@ -97,11 +98,11 @@ Introducing GCG, a task to create image-level captions tied to segmentation mask
 Our model excels in creating segmentation masks from text-based referring expressions.
 
 <p align="center">
-  <img src="images/glamm/results_3_refseg.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_3_refseg.png" alt="Results_RefSeg">
 </p>
 
 <p align="center">
-  <img src="images/tables/ReferSeg_Table.png" alt="GranD-f Dataset Sample">
+  <img src="images/tables/ReferSeg_Table.png" alt="Table_RefSeg">
 </p>
 
 ---
@@ -111,11 +112,11 @@ Our model excels in creating segmentation masks from text-based referring expres
 GLaMM generates detailed region-specific captions and answers reasoning-based visual questions.
 
 <p align="center">
-  <img src="images/glamm/results_4_regcap.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_4_regcap.png" alt="Results_RegionCap">
 </p>
 
 <p align="center">
-  <img src="images/tables/Region_Cap_Table.png" alt="GranD-f Dataset Sample">
+  <img src="images/tables/Region_Cap_Table.png" alt="Table_RegionCap">
 </p>
 
 ---
@@ -125,7 +126,7 @@ GLaMM generates detailed region-specific captions and answers reasoning-based vi
 Comparing favorably to specialized models, GLaMM provides high-quality image captioning.
 
 <p align="center">
-  <img src="images/glamm/results_6_cap.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_6_cap.png" alt="Results_Cap">
 </p>
 
 ---
@@ -135,13 +136,13 @@ Comparing favorably to specialized models, GLaMM provides high-quality image cap
 GLaMM demonstrates its prowess in engaging in detailed, region-specific, and grounded conversations. This effectively highlights its adaptability in intricate visual-language interactions and robustly retaining reasoning capabilities inherent to LLMs.
 
 <p align="center">
-  <img src="images/glamm/results_4_conv.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_4_conv.png" alt="Results_Conv">
 </p>
 
 ---
 
 <p align="center">
-  <img src="images/glamm/results_5_conv.png" alt="GranD-f Dataset Sample">
+  <img src="images/glamm/results_5_conv.png" alt="Results_Conv">
 </p>
 
 ---
