@@ -1,2 +1,168 @@
-# GLaMM Grounding Large Multimodal Model
-Our code, dataset and pretrained models will be released soon.
+# GLaMM <img src="images/logos/face.png" height="40">: Grounding Large Multimodal Model
+<p align="center">
+    <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
+</p>
+
+#### [Hanoona Rasheed](https://www.hanoonarasheed.com/)\*, [Muhammad Maaz](https://www.muhammadmaaz.com)\*, [Sahal Shaji](https://www.linkedin.com/in/sahalshajim), [Abdelrahman Shaker](https://amshaker.github.io), [Salman Khan](https://salman-h-khan.github.io/), [Hisham Cholakkal](https://scholar.google.ae/citations?user=bZ3YBRcAAAAJ&hl=fr), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en), [Eric Xing](https://www.cs.cmu.edu/~epxing), [Ming-Hsuan Yang](https://scholar.google.com.pk/citations?user=p9-ohHsAAAAJ&hl=en) and [Fahad Khan](https://sites.google.com/view/fahadkhans/home)
+\* Equally contributing first authors
+
+#### **Mohamed bin Zayed University of Artificial Intelligence**
+
+[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](EDIT_HERE_PLEASE)
+[![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/lTvi8BspR3o)
+
+---
+
+## 📢 Latest Updates
+- **Nov-03-23**: GLaMM paper is released [arxiv link](EDIT_HERE_PLEASE). 🔥🔥
+- 📦 Code, models, and datasets coming soon! 🚀
+
+---
+
+## <img src="images/logos/face.png" height="40"> GLaMM Overview
+
+Grounding Large Multimodal Model (GLaMM) is an end-to-end trained LMM which provides visual grounding capabilities with the flexibility to process both image and region inputs. This enables the new unified task of Grounded Conversation Generation that combines phrase grounding, referring expression segmentation, and vision-language conversations. Equipped with the capability for detailed region understanding, pixel-level groundings, and conversational abilities, GLaMM offers a versatile capability to interact with visual inputs provided by the user at multiple granularity levels.
+
+---
+
+## 🏆 Contributions
+
+- **GLaMM Introduction.** We present the Grounding Large Multimodal Model (GLaMM), the first-of-its-kind model capable of generating natural language responses that are seamlessly integrated with object segmentation masks.
+
+- **Novel Task & Evaluation.** We propose a new task of Grounded Conversation Generation (GCG). We also introduce a comprehensive evaluation protocol for this task.
+
+- **GranD Dataset Creation.** We create the GranD - Grounding-anything Dataset, a large-scale densely annotated dataset with 7.5M unique concepts grounded in 810M regions.
+
+---
+
+## 👁️💬 GLaMM: Grounding Large Multimodal Model
+
+The components of GLaMM are cohesively designed to handle both textual and optional visual prompts (image level and region of interest), allowing for interaction at multiple levels of granularity, and generating grounded text responses.
+
+<p align="center">
+  <img src="images/glamm/model_arch.png" alt="GLaMM Architectural Overview">
+</p>
+
+---
+
+## 🔍 Grounding-anything Dataset (GranD)
+
+GranD dataset, a large-scale dataset with automated annotation pipeline for detailed region-level understanding and segmentation masks. GranD comprises 7.5M unique concepts anchored in a total of 810M regions, each with a segmentation mask.
+
+<p align="center">
+  <img src="images/glamm/dataset_pipeline.png" alt="Dataset Annotation Pipeline">
+</p>
+
+---
+Below we present some examples of the GranD dataset.
+
+<p align="center">
+  <img src="images/glamm/grand_sample_2.png" alt="GranD Dataset Sample">
+</p>
+
+<p align="center">
+  <img src="images/glamm/grand_sample_1.png" alt="GranD Dataset Sample">
+</p>
+
+---
+
+## 📚 Building GranD-f for Grounded Conversation Generation
+
+GranD-f is designed for the GCG task, with about 214K image-grounded text pairs for higher-quality data in fine-tuning stage.
+
+<p align="center">
+  <img src="images/glamm/grand_f_samples.png" alt="GranD-f Dataset Sample">
+</p>
+
+---
+
+## 🤖 Grounded Conversation Generation (GCG)
+
+Introducing GCG, a task to create image-level captions tied to segmentation masks, enhancing the model’s visual grounding in natural language captioning.
+
+<p align="center">
+  <img src="images/glamm/results_7_gcg_combined.png" alt="Results_GCG">
+</p>
+
+<p align="center">
+  <img src="images/tables/GCG_Table.png" alt="GCG_Table">
+</p>
+
+---
+
+## 🚀 Downstream Applications
+
+### 🎯 Referring Expression Segmentation
+
+Our model excels in creating segmentation masks from text-based referring expressions.
+
+<p align="center">
+  <img src="images/glamm/results_3_refseg.png" alt="Results_RefSeg">
+</p>
+
+<p align="center">
+  <img src="images/tables/ReferSeg_Table.png" alt="Table_RefSeg">
+</p>
+
+---
+
+### 🖼️ Region-Level Captioning
+
+GLaMM generates detailed region-specific captions and answers reasoning-based visual questions.
+
+<p align="center">
+  <img src="images/glamm/results_4_regcap.png" alt="Results_RegionCap">
+</p>
+
+<p align="center">
+  <img src="images/tables/Region_Cap_Table.png" alt="Table_RegionCap">
+</p>
+
+---
+
+### 📷 Image Captioning
+
+Comparing favorably to specialized models, GLaMM provides high-quality image captioning.
+
+<p align="center">
+  <img src="images/glamm/results_6_cap.png" alt="Results_Cap">
+</p>
+
+---
+
+## 💬 Conversational Style Question Answering
+
+GLaMM demonstrates its prowess in engaging in detailed, region-specific, and grounded conversations. This effectively highlights its adaptability in intricate visual-language interactions and robustly retaining reasoning capabilities inherent to LLMs.
+
+<p align="center">
+  <img src="images/glamm/results_4_conv.png" alt="Results_Conv">
+</p>
+
+---
+
+<p align="center">
+  <img src="images/glamm/results_5_conv.png" alt="Results_Conv">
+</p>
+
+---
+
+## 📜 Citation
+```bibtex
+  @article{hanoona2023GLaMM,
+          title={GLaMM: Grounding Large Multimodal Model},
+          author={Rasheed, Hanoona and Maaz, Muhammad and Shaji, Sahal and Shaker, Abdelrahman and Khan, Salman and Cholakkal, Hisham and Anwer, Rao M. and Xing, Eric and Yang, Ming-Hsuan and Khan, Fahad S.},
+          journal={arXiv},
+          year={2023}
+  }
+```
+
+---
+## 🙏 Acknowledgement
+We are thankful to LLaVA, GPT4ROI, and LISA for releasing their models and code as open-source contributions.
+
+
+---
+[<img src="images/logos/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.com)
+[<img src="images/logos/Oryx_logo.png" width="100" height="100">](https://github.com/mbzuai-oryx)
+[<img src="images/logos/MBZUAI_logo.png" width="360" height="85">](https://mbzuai.ac.ae)
