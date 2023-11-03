@@ -23,7 +23,11 @@
   <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/gradio.js"></script>
 </head>
 
+
 <style>
+    .section {
+    margin-bottom: -30px; /* Adjust this value as needed to reduce the space */
+  }
   .expandable-card .card-text-container {
     max-height: 200px;
     overflow-y: hidden;
@@ -120,39 +124,42 @@
               <!-- First Group of 3 Authors -->
               <div class="author-group">
                   <span class="author-block">
-                      <a href="https://hliu.cc/" style="color:#f68946;font-weight:normal;">Hanoona Rasheed<sup>*</sup></a>,
+                      <a href="https://www.hanoonarasheed.com" style="color:#f68946;font-weight:normal;">Hanoona Rasheed<sup>*</sup></a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://chunyuan.li/" style="color:#008AD7;font-weight:normal;">Muhammad Maaz<sup>*</sup></a>,
+                      <a href="https://www.muhammadmaaz.com/" style="color:#008AD7;font-weight:normal;">Muhammad Maaz<sup>*</sup></a>,
                   </span>
               </div>
 
               <!-- Second Group of 3 Authors -->
               <div class="author-group">
                   <span class="author-block">
-                      <a href="https://qywu.github.io/about.html" style="color:#F2A900;font-weight:normal;">Sahal Shaji</a>,
+                      <a href="https://www.linkedin.com/in/sahalshajim" style="color:#F2A900;font-weight:normal;">Sahal Shaji</a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Abdelrahman Shaker</a>,
+                      <a href="https://amshaker.github.io" style="color:#f68946;font-weight:normal;">Abdelrahman Shaker</a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Salman Khan</a>,
+                      <a href="https://salman-h-khan.github.io" style="color:#f68946;font-weight:normal;">Salman Khan</a>,
                   </span>
               </div>
 
               <!-- Third Group of 4 Authors -->
               <div class="author-group">
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Hisham Cholakkal</a>,
+                      <a href="https://scholar.google.ae/citations?user=bZ3YBRcAAAAJ&hl=fr" style="color:#f68946;font-weight:normal;">Hisham Cholakkal</a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Rao M. Anwer</a>,
+                      <a href="https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Rao M. Anwer</a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Eric Xing</a>,
+                      <a href="https://www.cs.cmu.edu/~epxing" style="color:#f68946;font-weight:normal;">Eric Xing</a>,
                   </span>
                   <span class="author-block">
-                      <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Fahad S. Khan</a>
+                      <a href="https://scholar.google.com.pk/citations?user=p9-ohHsAAAAJ&hl=en" style="color:#f68946;font-weight:normal;">Ming-Hsuan Yang</a>,
+                  </span>
+                  <span class="author-block">
+                      <a href="https://sites.google.com/view/fahadkhans/home" style="color:#f68946;font-weight:normal;">Fahad S. Khan</a>
                   </span>
               </div>
           </div>
@@ -161,12 +168,12 @@
             </div>
 
             <div class="is-size-6 publication-authors">
-              <span class="author-block"><sup>*</sup>Equal Contribution</span>
+              <span class="author-block"><sup>*</sup>Equally contributing first authors</span>
             </div>
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2304.08485" target="_blank"
+                  <a href="EDIT_HERE_PLEASE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -175,7 +182,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/haotian-liu/LLaVA" target="_blank"
+                  <a href="https://github.com/mbzuai-oryx/groundingLMM" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -184,7 +191,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K" target="_blank"
+                  <a href="#grand-dataset" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
@@ -203,48 +210,46 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <h4 class="subtitle has-text-centered">
+        <h4 class="subtitle has-text-justified">
           Grounding Large Multimodal Model (GLaMM) is an end-to-end trained LMM which provides visual grounding capabilities with the flexibility to process both image and region inputs. This enables the new unified task of Grounded Conversation Generation that combines phrase grounding, referring expression segmentation and vision-language conversations.  Equipped with the capability for detailed region understanding, pixel-level groundings, and conversational abilities, GLaMM offers a versatile capability to interact with visual inputs provided by the user at multiple granularity levels (objects, object parts, attributes, relationships and holistic scene understanding).
         </h4>
       </div>
     </div>
   </section>
 
-  <section class="section"  style="background-color:#efeff081">
-    <div class="container is-max-desktop" id="gradio">
-      <gradio-app src="https://llava.hliu.cc"></gradio-app>
-    </div>
-  </section>
+<!--  <section class="section"  style="background-color:#efeff081">-->
+<!--    <div class="container is-max-desktop" id="gradio">-->
+<!--      <gradio-app src="https://llava.hliu.cc"></gradio-app>-->
+<!--    </div>-->
+<!--  </section>-->
 
   <section class="section"  style="background-color:#efeff081">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Instruction tuning large language models (LLMs) using machine-generated instruction-following data has improved zero-shot capabilities on new tasks in the language domain, but the idea is less explored in the multimodal field.
-              <ol type="1">
-                <li><b>GLaMM Introduction</b>. <span style="font-size: 95%;">We present the Grounding Large Multimodal Model (GLaMM), the first-of-its-kind model capable of generating natural language responses that are seamlessly integrated with object segmentation masks. Unlike existing models, GLaMM accommodates both textual and optional visual prompts, facilitating enhanced multimodal user interaction. </span></li>
-                <li><b>New Task & Evaluation</b>. <span style="font-size: 95%;">Recognizing the lack of standardized benchmarks for visually grounded conversations, we propose a new task of Grounded Conversation Generation (GCG). Alongside, we introduce a comprehensive evaluation protocol to measure the efficacy of models in this novel setting, filling a significant gap in the literature.</li>
-                <li><b>GranD Dataset Creation</b>. <span style="font-size: 95%;">To facilitate model training and evaluation, we create GranD, a large-scale densely annotated dataset. Developed using an automatic annotation pipeline and verification criteria, it encompasses 7.5M unique concepts grounded in 810M regions. Additionally, we produce GranD-f, a high-quality dataset explicitly designed for the GCG task, by re-purposing existing open-source datasets.</li>
-              </ol>  
-           </p>
-  
-          </div>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">🔥Highlights</h2>
+        <div class="content has-text-justified">
+          <ol type="1">
+            <li><b>GLaMM Introduction</b>. We present the <span style="color: #997300;">Grounding Large Multimodal Model (GLaMM)</span>, the first-of-its-kind model capable of generating natural language responses that are seamlessly integrated with object segmentation masks. Unlike existing models, GLaMM accommodates both textual and optional visual prompts, facilitating enhanced multimodal user interaction. </li>
+              <br>
+            <li><b>Novel Task & Evaluation</b>. Recognizing the lack of standardized benchmarks for visually grounded conversations, we propose a new task of <span style="color: #997300;">Grounded Conversation Generation</span> (GCG). Alongside, we introduce a comprehensive evaluation protocol to measure the efficacy of models in this novel setting, filling a significant gap in the literature.</li>
+              <br>
+            <li><b>GranD Dataset Creation</b>. To facilitate model training and evaluation, we create <span style="color: #997300;">GranD - Grounding-anything Dataset</span>, a large-scale densely annotated dataset. Developed using an automatic annotation pipeline and verification criteria, it encompasses 7.5M unique concepts grounded in 810M regions. Additionally, we produce <span style="color: #997300;">GranD-f</span>, a high-quality dataset explicitly designed for the GCG task, by re-purposing existing open-source datasets.</li>
+          </ol>
         </div>
       </div>
-        
     </div>
-  </section>
+  </div>
+</section>
 
 
 
+<!--Model Arch-->
 <section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="100"> GLaMM: Grounding Large Multimodal Model</h2>
+      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="60" style="vertical-align: bottom;"> GLaMM: Grounding Large Multimodal Model</h2>
     </div>
   </div>
 
@@ -253,7 +258,7 @@
       <div class="column is-full-width">
         <div class="content has-text-justified">
           <p>
-            Based on the COCO dataset, we interact with language-only GPT-4, and collect 158K unique language-image instruction-following samples in total, including 58K in conversations, 23K in detailed description, and 77k in complex reasoning, respectively.
+            GLaMM consists of five core components to achieve visually grounded conversations: i) Global Image Encoder, ii) Region Encoder, iii) LLM, iv) Grounding Image Encoder, and v) Pixel Decoder. These components are cohesively designed to handle both textual and optional visual prompts (image level and region of interest), allowing for interaction at multiple levels of granularity, and generating grounded text responses.
           </p>
         </div>
       </div>
@@ -264,322 +269,551 @@
         <figure style="text-align: center;">
           <img id="teaser" width="100%" src="images/glamm/model_arch.png">
           <figcaption>
-            Instruction: Conversation [<a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_0.html">0</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_20.html">20</a>, <a href="images/LLaVA-Instruct-150K_noun_verb/conversation_58k_instruction_verb_noun_50.html">50</a>]
+            The figure illustrates our model architecture showcasing its ability to offer scene-level understanding, region-level interpretation, and pixel-level grounding. The bottom row shows the diverse downstream applications of GLaMM, including referring expression segmentation, region-level captioning, image-level captioning and phrase grounding.
           </figcaption>
         </figure>
       </div>
     </div>
   </div>
 </section>
+<!-- Model Arch -->
+<!--Dataset-->
+<section id="grand-dataset" class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="70" style="vertical-align: bottom;"> Grounding-anything Dataset (GranD)</h2>
+    </div>
+  </div>
+  <!--Dataset Pipeline-->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Detailed region-level understanding requires the laborious process of collecting large-scale annotations for image regions. To alleviate the manual labelling effort, we propose an automated pipeline to annotate the large-scale Grounding-anything Dataset. Leveraging the automated pipeline with dedicated verification steps, GranD comprises <span style="color: #997300;">7.5M unique concepts</span> anchored in a total of <span style="color: #997300;">810M regions</span>, each with a segmentation mask.
+          </p>
+        </div>
+      </div>
+    </div>
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/dataset_pipeline.png">
+          <figcaption>
+            The figure shows the annotation Pipeline of the GranD Dataset. Level-1 details objects and attributes, level-2 includes short captions and relational markers, level-3 builds a scene graph, hierarchically organizing information from earlier levels to facilitate LLM for grounded dense captions, level-4 provides additional historical and societal context for a richer visual understanding.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+    <br>
+  <!--Dataset Samples-->
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Below we present some examples of the GranD dataset. Our automated annotation pipeline provides multiple semantic tags and attributes for objects along with segmentation masks. The dense caption thoroughly describes the visual scene with part of the text grounded to the corresponding objects. The additional context provides a deeper understanding of the scene, going beyond what's observed.
+          </p>
+        </div>
+      </div>
+    </div>
 
-<section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/grand_sample_2.png">
+<!--          <figcaption>-->
+<!--            Dataset sample from GranD dataset-->
+<!--          </figcaption>-->
+        </figure>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/grand_sample_1.png">
+          <figcaption>
+            Dataset samples from GranD dataset.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+    <br>
+    <br>
+    <!--Subsection-->
+<div class="container is-max-desktop">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h3 class="title is-4">Building GranD-f for Grounded Conversation Generation</h3>
+      <div class="content has-text-justified">
+        <p>
+          Motivated by the need for higher-quality data in fine-tuning stage, we introduce GranD-f. Explicitly designed for the GCG task, this dataset encompasses approximately 214K image-grounded text pairs. Of these, 2.6k samples are reserved for validation and 5k for testing. GranD-f comprises two primary components: one subset is manually annotated and the other subset derived by re-purposing existing open-source datasets.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> Examples on Visual Instruction Following</h2>
+      <figure style="text-align: center;">
+        <img id="annotation_example" width="100%" src="images/glamm/grand_f_samples.png">
+<!--        <figcaption>-->
+<!--          Dataset samples from GranD-f.-->
+<!--        </figcaption>-->
+      </figure>
+    </div>
+  </div>
+</div>
+
+
+</section>
+<!--Dataset-->
+<!--Results-->
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="70" style="vertical-align: bottom;"> Grounded Conversation Generation (GCG)</h2>
     </div>
   </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-         <h2 class="title is-4">Visual Reasoning on two examples from <a href="https://arxiv.org/abs/2303.08774">OpenAI GPT-4 Technical Report</a></h2>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            The objective of the GCG task is to construct image-level captions with specific phrases directly tied to corresponding segmentation masks in the image. By introducing the GCG task, we bridge the gap between textual and visual understanding, thereby enhancing the model’s ability for fine-grained visual grounding alongside natural language captioning.
+          </p>
+        </div>
       </div>
-      </div>  
+    </div>
 
     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/results_7_gcg_combined.png">
+          <figcaption>
+            Qualitative results of GLaMM's performance in grounded conversation generation.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!--Table - GCG-->
+  <div style="text-align: center;">
+    <table border="1" cellspacing="0" style="width: 58%; border-collapse: collapse; text-align: center; margin: 0 auto;">
+        <caption><strong>Comparison of GLaMM Model Performance on GCG Task</strong>: Metrics include METEOR, CIDEr, AP, mIoU, and Mask Recall for both validation and test sets in our proposed benchmark. LISA* indicates a modified LISA adapted for GCG.</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Model</th>
+                <th colspan="5">Validation Set</th>
+                <th colspan="5">Test Set</th>
+            </tr>
+            <tr>
+                <th>METEOR</th>
+                <th>CIDEr</th>
+                <th>AP50</th>
+                <th>mIoU</th>
+                <th>Recall</th>
+                <th>METEOR</th>
+                <th>CIDEr</th>
+                <th>AP50</th>
+                <th>mIoU</th>
+                <th>Recall</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BuboGPT</td>
+                <td>16.2</td>
+                <td>2.6</td>
+                <td>4.3</td>
+                <td>29.9</td>
+                <td>8.6</td>
+                <td>15.9</td>
+                <td>2.2</td>
+                <td>4.5</td>
+                <td>28.9</td>
+                <td>8.7</td>
+            </tr>
+            <tr>
+                <td>Kosmos-2</td>
+                <td>16.3</td>
+                <td>19.6</td>
+                <td>15.5</td>
+                <td>57.4</td>
+                <td>33.0</td>
+                <td>16.2</td>
+                <td>17.8</td>
+                <td>15.6</td>
+                <td>58.3</td>
+                <td>34.3</td>
+            </tr>
+            <tr>
+                <td>LISA*</td>
+                <td>13.8</td>
+                <td>49.8</td>
+                <td>27.2</td>
+                <td>65.5</td>
+                <td>42.0</td>
+                <td>13.8</td>
+                <td>48.9</td>
+                <td>28.4</td>
+                <td>66.3</td>
+                <td>43.2</td>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td>GLaMM</td>
+                <td>14.2</td>
+                <th>52.6</th>
+                <th>28.0</th>
+                <th>65.7</th>
+                <th>42.6</th>
+                <th>13.9</th>
+                <th>49.0</th>
+                <th>28.8</th>
+                <th>67.1</th>
+                <th>45.5</th>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+</section>
+<!--Results -->
+<!--Downstream-->
+<section class="section">
+  <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <img id="teaser" width="35%" src="images/cmp_ironing.png">
-      <img id="teaser" width="38%" src="images/cmp_chicken_nugget.png">
+      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="70" style="vertical-align: bottom;"> Downstream Applications</h2>
     </div>
-    </div>  
+  </div>
 
-  
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-         <h2 class="title is-4">Optical character recognition (OCR)</a></h2>
-      </div>
-      </div>  
-
-    <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
-        <img id="teaser" width="32%" src="images/ocr/llava_example_cvpr2023.png">
-        <img id="teaser" width="32%" src="images/ocr/llava_example_cvinw_logo.png">
-        <img id="teaser" width="32%" src="images/ocr/example_llava_exmaple.png">
-    </div>
-    </div>  
-
-  
-
-  
-
-
-  <div class="container mt-5">
-    <!-- <h2 class="text-center mb-5">Who's GPT-4's favorite? Battles between State-of-the-Art Chatbots</h2> -->
-    <!-- Selection -->
-    <div class="form-row" style="justify-content: flex-end;">
-      <div class="form-group col-md-1">
-        <div class="col-md-2" style="width: 100%"><label>&nbsp;</label></div>
-        <div class="btn-group" role="group" aria-label="Left and Right Controller"
-          style="width: 100%;align-items: flex-end;justify-content: center;flex-direction: row;display: flex;">
-          <button type="button" class="form-control btn btn-primary" id="prev-question"><i
-              class="material-icons">keyboard_arrow_left</i></button>
-          <button type="button" class="form-control btn btn-primary" id="next-question"><i
-              class="material-icons">keyboard_arrow_right</i></button>
-
+  <div class="container is-max-desktop">
+    <!-- First Subheading -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Referring Expression Segmentation</h3>
+        <div class="content has-text-justified">
+          <p>
+            In this task, the model receives an image along with a text-based referring expression, to which it outputs a corresponding segmentation mask. We present quantitative results on the validation and testing sets of refCOCO, refCOCO+, and refCOCOg.
+          </p>
         </div>
+        <figure>
+          <img width="100%" src="images/glamm/results_3_refseg.png">
+          <figcaption style="text-align: center;">Qualitative results of GLaMM's capability in referring expression segmentation.</figcaption>
+        </figure>
       </div>
     </div>
+      <div style="text-align: center;">
+    <table border="1" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: center; margin: 0 auto;">
+        <caption><strong>Quantitative Assessment of GLaMM in Referring-Expression Segmentation</strong>: Performance across refCOCO, refCOCO+, and refCOCOg in generating accurate segmentation masks based on text-based referring expressions surpasses that of closely related work.</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Method</th>
+                <th colspan="3">refCOCO</th>
+                <th colspan="3">refCOCO+</th>
+                <th colspan="2">refCOCOg</th>
+            </tr>
+            <tr>
+                <th>val</th>
+                <th>testA</th>
+                <th>testB</th>
+                <th>val</th>
+                <th>testA</th>
+                <th>testB</th>
+                <th>val(U)</th>
+                <th>test(U)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CRIS (CVPR-22)</td>
+                <td>70.5</td>
+                <td>73.2</td>
+                <td>66.1</td>
+                <td>65.3</td>
+                <td>68.1</td>
+                <td>53.7</td>
+                <td>59.9</td>
+                <td>60.4</td>
+            </tr>
+            <tr>
+                <td>LAVT (CVPR-22)</td>
+                <td>72.7</td>
+                <td>75.8</td>
+                <td>68.8</td>
+                <td>62.1</td>
+                <td>68.4</td>
+                <td>55.1</td>
+                <td>61.2</td>
+                <td>62.1</td>
+            </tr>
+            <tr>
+                <td>GRES (CVPR-23)</td>
+                <td>73.8</td>
+                <td>76.5</td>
+                <td>70.2</td>
+                <td>66.0</td>
+                <td>71.0</td>
+                <td>57.7</td>
+                <td>65.0</td>
+                <td>66.0</td>
+            </tr>
+            <tr>
+                <td>X-Decoder (CVPR-23)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>64.6</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>SEEM (arXiv-23)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>65.7</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>LISA-7B (ZS) (arXiv-23)</td>
+                <td>74.1</td>
+                <td>76.5</td>
+                <td>71.1</td>
+                <td>62.4</td>
+                <td>67.4</td>
+                <td>56.5</td>
+                <td>66.4</td>
+                <td>68.4</td>
+            </tr>
+            <tr>
+                <td>LISA-7B (FT) (arXiv-23)</td>
+                <td>74.9</td>
+                <td>79.1</td>
+                <td>72.3</td>
+                <td>65.1</td>
+                <td>70.8</td>
+                <td>58.1</td>
+                <td>67.9</td>
+                <td>70.6</td>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td>GLaMM (ZS)</td>
+                <td>54.7</td>
+                <td>58.1</td>
+                <td>52.2</td>
+                <td>42.5</td>
+                <td>47.1</td>
+                <td>39.5</td>
+                <td>54.8</td>
+                <td>55.6</td>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td>GLaMM (FT)</td>
+                <th>78.3</th>
+                <th>81.5</th>
+                <th>74.4</th>
+                <th>68.0</th>
+                <th>75.7</th>
+                <th>61.8</th>
+                <th>72.5</th>
+                <th>72.0</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+      <br><br>
 
-    <!-- Question Card -->
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <div class="card mb-4" style="width: 100%; display: flex; align-items: center;">
-        <!-- <p><b>Description:</b> Monalisa is a famous painting by Leonardo da Vinci. </p> -->
 
-        <div class="card-body" id="selected-question" style="display: flex; height: 80vh;">
-          <div class="chat-history">
-            <!-- Add your chat messages here -->
-          </div>
-
+    <!-- Second Subheading -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Region-Level Captioning</h3>
+        <div class="content has-text-justified">
+          <p>
+            In this task, the goal is to generate referring expressions, or region-specific captions. The model is input an image, a designated region, and accompanying text, and is then tasked with responding to questions about the specified region. We conduct a quantitative assessment of region-level captioning on two OpenSource datasets: Visual Genome and refCOCOg. The qualitative results shown below demonstrates GLaMM's ability to adeptly generate region-specific captions, translating the intricate details from designated regions into coherent textual descriptions, enriched by its training on the comprehensive GranD dataset. This capability, combined with the inherent reasoning abilities of LLMs, enables it to tackle reasoning-based visual questions about these regions.
+          </p>
         </div>
+        <figure>
+          <img width="100%" src="images/glamm/results_4_regcap.png">
+          <figcaption style="text-align: center;">Qualitative illustration of GLaMM's performance in region-level captioning.</figcaption>
+        </figure>
       </div>
     </div>
+<!--      results-->
+      <div style="text-align: center;">
+    <table border="1" cellspacing="0" style="width: 80%; border-collapse: collapse; text-align: center; margin: 0 auto;">
+        <caption><strong>Performance of GLaMM in Region-Level Captioning</strong>: Metrics include METEOR and CIDEr scores, assessed on Visual Genome and refCOCOg Datasets, exhibiting competitive results.</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Model</th>
+                <th colspan="2">refCOCOg</th>
+                <th colspan="2">Visual Genome</th>
+            </tr>
+            <tr>
+                <th>METEOR</th>
+                <th>CIDEr</th>
+                <th>METEOR</th>
+                <th>CIDEr</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GRIT</td>
+                <td>15.2</td>
+                <td>71.6</td>
+                <td>17.1</td>
+                <td>142</td>
+            </tr>
+            <tr>
+                <td>Kosmos-2</td>
+                <td>14.1</td>
+                <td>62.3</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>GPT4RoI</td>
+                <td>-</td>
+                <td>-</td>
+                <td>17.4</td>
+                <td>145.2</td>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td>GLaMM (ZS)</td>
+                <td>15.7</td>
+                <td>104.0</td>
+                <td>17.0</td>
+                <td>127.0</td>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td>GLaMM (FT)</td>
+                <th>16.2</th>
+                <th>105.0</th>
+                <th>18.6</th>
+                <th>157.8</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br><br>
 
+    <!-- Third Subheading -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Image Captioning</h3>
+        <div class="content has-text-justified">
+          <p>
+             GLaMM offers favourable performance when compared with recent models specialized in image captioning, as well as other LMMs. Qualitative results for image captioning are shown below.
+          </p>
+        </div>
+        <figure>
+          <img width="100%" src="images/glamm/results_6_cap.png">
+          <figcaption style="text-align: center;">Qualitative results of GLaMM on image-level captioning tasks..</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
+<!--Downstream -->
+<!--Conv-->
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img src="images/glamm/GlamImage-min.png" alt="GLaMM_face" width="70" style="vertical-align: bottom;"> Conversational Style Question Answering</h2>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            We evaluate our model on conversational style question answering. The qualitative results shown below showcases GLaMM engaging in multi-turn dialogues, providing detailed descriptions, addressing region-specific inquiries, and presenting grounded conversations. This effectively highlights its adaptability in intricate visual-language interactions and robustly retaining reasoning capabilities inherent to LLMs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/results_4_conv.png">
+          <figcaption>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths" style="display: flex; align-items: flex-start; justify-content: center;">
+        <figure style="text-align: center;">
+          <img id="teaser" width="100%" src="images/glamm/results_5_conv.png">
+          <figcaption>
+            Multimodal conversational interactions facilitated by GLaMM.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Conv -->
+<style>
+  #BibTeX {
+    margin-bottom: -80px; /* Adjust the negative margin as needed */
+  }
+  #Acknowledgement {
+    margin-top: -80px; /* Adjust the negative margin as needed */
+  }
+</style>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-  @misc{liu2023improvedllava,
-          author={Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
-          title={Improved Baselines with Visual Instruction Tuning}, 
-          publisher={arXiv:2310.03744},
+  @article{hanoona2023GLaMM,
+          author={Hanoona Rasheed, Muhammad Maaz, Sahal Shaji, Abdelrahman Shaker, Salman Khan, Hisham Cholakkal,
+          Rao M. Anwer, Eric Xing, Ming-Hsuan Yang, Fahad S. Khan},
+          title={GLaMM: Grounding Large Multimodal Model},
+          publisher={arXiv:EDIT_HERE_PLEASE},
           year={2023},
-  }
-
-  @inproceedings{liu2023llava,
-    author      = {Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
-    title       = {Visual Instruction Tuning},
-    booktitle   = {NeurIPS},
-    year        = {2023}
   }
   </code></pre>
     </div>
   </section>
-  
   <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgement</h2>
       <p>
         This website is adapted from <a
         href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-        Commons Attribution-ShareAlike 4.0 International License</a>.  We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.
+        Commons Attribution-ShareAlike 4.0 International License</a>.  We are thankful to LLaVA, GPT4ROI, and LISA for releasing their models and code as open-source contributions.
       </p>
-
-      <p>
-<b>Usage and License Notices</b>: The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
-</p>
-
-      <p>
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a> 
-      Related Links: 
-      <a href='https://react-vl.github.io/'>[REACT]</a>  
-      <a href='https://gligen.github.io/'>[GLIGEN]</a> 
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'>[Computer Vision in the Wild (CVinW)]</a> 
-      <a href='https://instruction-tuning-with-gpt-4.github.io/'>[Insutrction Tuning with GPT-4]</a>      
-      </p>    
     </div>
   </section>
-
-  <script>
-    // Handle message showing
-    function createChatRow(sender, text, imageSrc) {
-      var article = document.createElement("article");
-      article.className = "media"
-
-      var figure = document.createElement("figure");
-      figure.className = "media-left";
-
-      var span = document.createElement("span");
-      span.className = "icon is-large";
-
-      var icon = document.createElement("i");
-      icon.className = "fas fas fa-2x" + (sender === "User" ? " fa-user " : sender === "LLaVA" ? " fa-robot" : "");
-
-      var media = document.createElement("div");
-      media.className = "media-content";
-
-      var content = document.createElement("div");
-      content.className = "content";
-
-      var para = document.createElement("p");
-
-      // wrap text in pre tag to preserve whitespace and line breaks
-      var pre_text = document.createElement("pre");
-      pre_text.style = "background-color: white; font-size: 18px; font-family: Arial; padding: 0; margin: 0; white-space: pre-wrap; word-wrap: break-word;";
-      var paraText = document.createTextNode(text);
-      pre_text.appendChild(paraText);
-
-      var strong = document.createElement("strong");
-      strong.innerHTML = sender;
-      var br = document.createElement("br");
-
-      para.appendChild(strong);
-      para.appendChild(br);
-      para.appendChild(pre_text);
-
-      // Add image if imageSrc is provided
-      if (imageSrc) {
-        var img = document.createElement("img");
-        img.src = imageSrc;
-        img.style = "max-width: 100%; max-height: 300px;"; // Adjust the style as needed
-        para.appendChild(img);
-      }
-
-      content.appendChild(para);
-      media.appendChild(content);
-      span.appendChild(icon);
-      figure.appendChild(span);
-      if (sender !== "Description") {
-        article.appendChild(figure);
-      };
-      article.appendChild(media);
-      return article;
-    }
-
-    function addMessageToChatHistory(sender, message, imageSrc) {
-      const chatHistory = document.querySelector('.chat-history');
-      const chatRow = createChatRow(sender, message, imageSrc);
-      chatHistory.appendChild(chatRow);
-      chatHistory.scrollTop = chatHistory.scrollHeight;
-    }
-
-    function clearChatHistory() {
-      const chatHistory = document.querySelector('.chat-history');
-      chatHistory.innerHTML = "";
-    }
-
-    // 
-    const conversations = [
-      {
-        "description": "monalisa",
-        "turns": [
-          // ["Description", "Please read the description and answer the question."],
-          ["User", "", "/static/images/monalisa.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA",
-            "The painting depicts a woman, commonly believed to be Mona Lisa, the famous artwork by Leonardo da Vinci. " +
-            "It is a portrait painting that showcases the woman's enigmatic smile and has become one of the most famous and iconic art pieces in the world. " +
-            "The original work is displayed in the Louvre Museum in Paris, and it is known for its intricate details, use of oil paint, and the artist's innovative techniques that contributed to its enduring appeal and mystery.​​"
-          ]
-        ]
-      },
-      {
-        "description": "monalisa with dog head",
-        "turns": [
-          ["User", "", "/static/images/monalisa-fun.jpg"],
-          ["User", "Do you know who drew this painting?​"],
-          ["LLaVA", "The painting depicts a dog in a humorous situation, where it appears to be wearing a woman's dress and standing in front of a landscape. Although the artist of the painting is not explicitly identified, it could be a reference to the famous artist Da Vinci, known for his artistic works, including the Mona Lisa. The painting is likely a creative and comical take on the traditional portrait style, replacing a human figure with a dog dressed in a woman's clothing, making it an interesting and amusing visual piece.​"]
-        ]
-      },
-      {
-        "description": "Titanic Rose and Jack",
-        "turns": [
-          ["User", "", "/static/images/titanic.jpg"],
-          ["User", "What's the ending of this movie?​​"],
-          ["LLaVA", "​In the image, a young woman is leaning on a man in front of a beautiful sunset, with both of them standing on a boat. They appear to be enjoying a romantic moment together. The scene suggests that they could be depicted as the characters Jack and Rose from the popular movie Titanic. In the movie, their romance blossoms aboard the fictional ocean liner Titanic, with the pair ultimately sharing a passionate kiss as the ship sinks into the ocean. The ending of the movie is known for its emotional and heartfelt scenes, where the characters are forced to say goodbye to each other as they are separated by the sinking ship. The image evokes a sense of romance and nostalgia, paying tribute to the iconic love story portrayed in the movie Titanic.​"]
-        ]
-      },
-      {
-        "description": "Fridge",
-        "turns": [
-          ["User", "", "/static/images/fridge.jpg"],
-          ["User", "What are the meals that I can cook with these?​​"],
-          ["LLaVA", "With the variety of food items stored in the refrigerator, you can prepare several meals. For example, you can create a fruit salad using the strawberries, blueberries, and carrots. Additionally, you can make a delicious smoothie using the fruits and vegetables, which would be a healthy and nutritious snack or breakfast option. The milk and eggs can be used to create various dishes, such as a milk-based smoothie, a baked casserole, or scrambled eggs. The juice can also be used to make a fresh fruit and juice mix or as a refreshing homemade popsicle. The possibilities are vast, and the meals you can create will depend on your preferences and dietary needs.​​"],
-          ["User", "I would like to do the fruit salad.  Show me the recipe.​"],
-          ["LLaVA",
-            `Certainly! Here's a simple fruit salad recipe using the items in your refrigerator:​
-
-Ingredients:​
-- 2 cups fresh strawberries, sliced​
-- 1 cup fresh blueberries​
-- 1 large carrot, grated​
-- Juice of half a lemon​
-- A handful of chopped fresh parsley or mint​
-- A few ice cubes​
-- Optional: honey or maple syrup (adjust to taste)​
-
-Instructions:​
-1. In a large bowl, combine the sliced strawberries, blueberries, and carrot. Gently toss them together to mix.​
-2. Drizzle the juice of half a lemon over the fruit and vegetables to prevent them from oxidizing and add a refreshing citrus flavor.​
-3. Sprinkle the chopped fresh parsley or mint over the fruit and gently toss once more.​
-4. If desired, add a drizzle of honey or maple syrup for a touch of sweetness. Adjust the amount according to your taste preferences.​
-5. Cover the bowl and refrigerate the fruit salad for at least 30 minutes or up to a few hours. This allows the flavors to meld and creates a more refreshing salad.​
-6. Serve the fruit salad in cups or bowls, garnished with a sprinkle of fresh parsley or mint, if desired.​
-
-This fruit salad recipe is perfect for a healthy snack or side dish, and with the variety of ingredients available in your refrigerator, it should be easy to put together quickly.`]]
-      },
-      {
-        "description": "Beautiful View",
-        "turns": [
-          ["User", "", "/static/images/view.jpg"],
-          ["User", "What are the things I should be cautious about when I visit here?​​"],
-          ["LLaVA", "When visiting this peaceful location with a pier extending over a serene lake, surrounded by mountains, there are several things to be cautious about. First, pay attention to the weather conditions, as sudden changes in weather, especially strong winds or storms, can cause the water to become rough and pose risks to the stability of the pier. Second, be mindful of the structural integrity of the pier; avoid overloading it with too many people or excessive weight, as this could potentially damage the pier or cause it to collapse. Additionally, be aware of the surrounding wildlife and respect their space; do not harm or disturb them in any way. Finally, if you decide to go fishing, ensure that you adhere to any local fishing regulations and use appropriate fishing techniques to keep the lake ecosystem healthy and maintain the balance of the food chain.​​"],
-          ["User", "Compose an engaging travel blog post about my trip to this place, highlighting the beautiful sceneries, joyful experiences, and include possible anecdotes.​​"],
-          ["LLaVA",
-            `Traveling to this picturesque location with a serene lake and mountains in the background was a refreshing and rejuvenating experience. The pier extending over the calm water provided an excellent vantage point from which to appreciate the breathtaking scenery. As I stood on the pier, I couldn't help but feel a deep connection with nature, taking a moment to soak in the peaceful atmosphere.​
-
-One of the highlights of my trip was undoubtedly the fishing experience. The area is teeming with life, and I was thrilled to land a sizeable catch, despite the modest size of the lake. The joy of fishing in such a beautiful setting was truly rewarding, and it allowed me to take a break from my busy life and truly immerse myself in the tranquility of nature.​
-
-While exploring the surrounding area, I came across a family of birds that had built a nest close to the pier, adding to the charm of the location. Interacting with the wildlife and observing their behavior was an enriching experience that I'll cherish for years to come.​
-
-In conclusion, this idyllic destination provided me with an opportunity to unwind and recharge, surrounded by mesmerizing natural beauty and the gentle sounds of water and wildlife. If you're looking for a serene escape from the hustle and bustle of everyday life, this pier overlooking the lake is the perfect place to find solace and reconnect with nature.`
-          ]
-        ]
-      },
-    ];
-
-    // The current image index
-    let currentIndex = 0;
-
-    // The function to update the displayed chat history
-    function update_dialog_demo() {
-      // Clear the chat history
-      clearChatHistory();
-
-      for (let i = 0; i < conversations[currentIndex].turns.length; i++) {
-        if (conversations[currentIndex].turns[i].length == 2) {
-          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1]);
-        }
-        else {
-          addMessageToChatHistory(conversations[currentIndex].turns[i][0], conversations[currentIndex].turns[i][1], conversations[currentIndex].turns[i][2]);
-        }
-      }
-
-      // scroll to the top of the chat history
-      document.querySelector('.chat-history').scrollTop = 0;
-    }
-
-    // Initialize the displayed image
-    update_dialog_demo();
-
-    // Event listeners for the buttons
-    document.getElementById('prev-question').addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + conversations.length) % conversations.length;
-      update_dialog_demo();
-    });
-
-    document.getElementById('next-question').addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % conversations.length;
-      update_dialog_demo();
-    });
-
-
-  </script>
 
 </body>
 
 </html>
+
+<div style="text-align: center;">
+  <a href="https://www.ival-mbzuai.com" target="_blank">
+    <img src="images/logos/IVAL_logo.png" width="200" height="100" alt="IVAL Logo">
+  </a>
+  <a href="https://github.com/mbzuai-oryx" target="_blank">
+    <img src="images/logos/Oryx_logo.png" width="100" height="100" alt="Oryx Logo">
+  </a>
+  <a href="https://mbzuai.ac.ae" target="_blank">
+    <img src="images/logos/MBZUAI_logo.png" width="360" height="85" alt="MBZUAI Logo">
+  </a>
+</div>
+
