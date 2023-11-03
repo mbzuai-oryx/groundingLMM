@@ -8,7 +8,7 @@
 
 #### **Mohamed bin Zayed University of Artificial Intelligence**
 
-[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://github.com/mbzuai-oryx/groundingLMM)
+[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](EDIT_HERE_PLEASE)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://youtu.be/lTvi8BspR3o)
 
