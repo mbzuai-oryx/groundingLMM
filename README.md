@@ -1,4 +1,4 @@
-# GLaMM <img src="images/logos/face.png" height="40">: Grounding Large Multimodal Model
+# GLaMM <img src="images/logos/face.png" height="40">: Pixel Grounding Large Multimodal Model
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
 </p>
