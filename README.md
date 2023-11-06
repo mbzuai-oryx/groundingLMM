@@ -10,7 +10,7 @@
 
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](EDIT_HERE_PLEASE)
-[![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)]()
+[![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)](GLaMM_Full_Paper.pdf)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://www.youtube.com/watch?v=0dZ4dlNIGTY)
 
 ---
