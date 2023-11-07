@@ -18,7 +18,7 @@
 ## 📢 Latest Updates
 - **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🔥🔥
 - 📦 Code, models, and datasets coming soon! 🚀
-- 🌟 **Featured**: "GLaMM" is now highlighted at the top on AK's "[Daily Papers](https://huggingface.co/papers)" page on HuggingFace! 🌟
+- 🌟 **Featured**: GLaMM is now highlighted at the top on AK's [Daily Papers](https://huggingface.co/papers) page on HuggingFace! 🌟
 
 ---
 
