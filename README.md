@@ -16,7 +16,7 @@
 ---
 
 ## 📢 Latest Updates
-- **Nov-03-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🔥🔥
+- **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🔥🔥
 - 📦 Code, models, and datasets coming soon! 🚀
 
 ---
@@ -151,7 +151,7 @@ GLaMM demonstrates its prowess in engaging in detailed, region-specific, and gro
 ## 📜 Citation
 ```bibtex
   @article{hanoona2023GLaMM,
-          title={GLaMM: Grounding Large Multimodal Model},
+          title={GLaMM: Pixel Grounding Large Multimodal Model},
           author={Rasheed, Hanoona and Maaz, Muhammad and Shaji, Sahal and Shaker, Abdelrahman and Khan, Salman and Cholakkal, Hisham and Anwer, Rao M. and Xing, Eric and Yang, Ming-Hsuan and Khan, Fahad S.},
           journal={ArXiv 2311.03356},
           year={2023}
