@@ -153,7 +153,7 @@ GLaMM demonstrates its prowess in engaging in detailed, region-specific, and gro
   @article{hanoona2023GLaMM,
           title={GLaMM: Grounding Large Multimodal Model},
           author={Rasheed, Hanoona and Maaz, Muhammad and Shaji, Sahal and Shaker, Abdelrahman and Khan, Salman and Cholakkal, Hisham and Anwer, Rao M. and Xing, Eric and Yang, Ming-Hsuan and Khan, Fahad S.},
-          journal={arXiv},
+          journal={ArXiv 2311.03356},
           year={2023}
   }
 ```
