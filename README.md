@@ -8,6 +8,7 @@
 
 #### **Mohamed bin Zayed University of AI, Australian National University, Aalto University, Carnegie Mellon University, University of California - Merced, Linköping University, Google Research**
 
+[![Demo](https://img.shields.io/badge/Online-Demo-red)](https://glamm.mbzuai-oryx.ngrok.app)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2311.03356)
 [![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)](GLaMM_Full_Paper.pdf)
@@ -16,6 +17,7 @@
 ---
 
 ## 📢 Latest Updates
+- **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥🔥
 - **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🔥🔥
 - 📦 Code, models, and datasets coming soon! 🚀
 - 🌟 **Featured**: GLaMM is now highlighted at the top on AK's [Daily Papers](https://huggingface.co/papers) page on HuggingFace! 🌟
