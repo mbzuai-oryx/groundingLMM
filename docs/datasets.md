@@ -119,7 +119,7 @@ Overall, they must be arranged in the following format:
 The GranD-f datasets comprise four datasets: one high-quality human-annotated set proposed in our GLaMM paper, and 3 other datasets repurposed for the GCG task.
 
 Download links and structure:
-- Annotations: [Download](https://drive.google.com/file/d/1BRXTGtTubd0tHua1Xp6SJjB3w27br4oW/view?usp=drivesdk)
+- Annotations: [MBZUAI/GranD-f](https://huggingface.co/datasets/MBZUAI/GranD-f)
 - Images: `GranDf_HA_images` [Download](https://drive.google.com/file/d/1abdxVhrbNQhjJQ8eAcuPrOUBzhGaFsF_/view?usp=drive_link)
 - Other necessary datasets: 
   - Open-PSG GCG: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip))
@@ -172,7 +172,7 @@ Download links and structure:
 - [PASCAL-Part](https://www.mapillary.com/dataset/vistas)
 - [PACO-LVIS](https://github.com/facebookresearch/paco/tree/main#dataset-setup)
 - [Mapillary](https://github.com/facebookresearch/VLPart/tree/main/datasets#pascal-part)
-- COCO images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip)
+- COCO images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip))
 
 Download and arrange as shown in the directory structure below.
 
@@ -285,7 +285,7 @@ We use the COCO caption dataset.
 
 Download links and structure:
 - Annotations - [COCO - 2017 annotations](http://images.cocodataset.org/annotations/annotations_trainval2017.zip)
-- Images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip)
+- Images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip))
 
 Structure as shown in the directory structure above.
 
@@ -304,7 +304,7 @@ We use the LLaVA-instruct-150k set for visual question answering. Download and a
 
 Download links and structure:
 - Annotations - [LLaVA-instruct-150k](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_instruct_150k.json)
-- Images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip)
+- Images: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip))
 
 ```
 ├── llava_dataset
