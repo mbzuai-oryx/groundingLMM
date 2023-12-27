@@ -418,7 +418,7 @@
   <!--Table - GCG-->
   <div style="text-align: center;">
     <table border="1" cellspacing="0" style="width: 58%; border-collapse: collapse; text-align: center; margin: 0 auto;">
-        <caption><strong>Comparison of GLaMM Model Performance on GCG Task</strong>: Metrics include METEOR, CIDEr, AP, mIoU, and Mask Recall for both validation and test sets in our proposed benchmark. LISA* indicates a modified LISA adapted for GCG.</caption>
+        <caption><strong>Comparison of GLaMM Model Performance on GCG Task</strong>: Metrics include METEOR, CIDEr, AP, mIoU, and Mask Recall for both validation and test sets in our proposed benchmark. LISA* indicates a modified LISA adapted for GCG. The GLaMM† denotes the variant trained on the GranDf dataset excluding the 1000 human-annotated images.</caption>
         <thead>
             <tr>
                 <th rowspan="2">Model</th>
@@ -441,7 +441,7 @@
         <tbody>
             <tr>
                 <td>BuboGPT</td>
-                <td>17.2</td>
+                <th>17.2</th>
                 <td>3.5</td>
                 <td>19.6</td>
                 <td>53.5</td>
@@ -470,7 +470,7 @@
                 <td>13.3</td>
                 <td>35.6</td>
                 <td>26.2</td>
-                <th>62.1</th>
+                <td>62.1</td>
                 <td>37.6</td>
                 <td>13.1</td>
                 <td>33.0</td>
@@ -479,17 +479,31 @@
                 <td>36.1</td>
             </tr>
             <tr style="background-color: #e6e6ff;">
+                <td>GLaMM&dagger;</td>
+                <td>15.2</td>
+                <td>43.1</td>
+                <td>28.9</td>
+                <td>65.8</td>
+                <td>39.6</td>
+                <td>14.6</td>
+                <td>37.9</td>
+                <td>27.2</td>
+                <td>64.6</td>
+                <td>38.0</td>
+            </tr>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
                 <td>GLaMM</td>
-                <td>13.7</td>
-                <th>35.7</th>
-                <th>27.3</th>
-                <td>62.0</td>
-                <th>38.7</th>
-                <th>13.3</th>
-                <th>34.8</th>
-                <th>26.0</th>
-                <th>62.0</th>
-                <th>36.8</th>
+                <td>16.2</td>
+                <th>47.2</th>
+                <th>30.8</th>
+                <th>66.3</th>
+                <th>41.8</th>
+                <th>15.8</th>
+                <th>43.5</th>
+                <th>29.2</th>
+                <th>65.6</th>
+                <th>40.8</th>
             </tr>
         </tbody>
     </table>
@@ -633,14 +647,14 @@
             </tr>
             <tr style="background-color: #e6e6ff;">
                 <td>GLaMM (FT)</td>
-                <th>78.3</th>
-                <th>81.5</th>
-                <th>74.4</th>
-                <th>68.0</th>
-                <th>75.7</th>
-                <th>61.8</th>
-                <th>72.5</th>
-                <th>72.0</th>
+                <th>79.5</th>
+                <th>83.2</th>
+                <th>76.9</th>
+                <th>72.6</th>
+                <th>78.7</th>
+                <th>64.6</th>
+                <th>74.2</th>
+                <th>74.9</th>
             </tr>
         </tbody>
     </table>
@@ -712,9 +726,9 @@
             <tr style="background-color: #e6e6ff;">
                 <td>GLaMM (FT)</td>
                 <th>16.2</th>
-                <th>105.0</th>
-                <th>18.6</th>
-                <th>157.8</th>
+                <th>106.0</th>
+                <th>19.1</th>
+                <th>164.6</th>
             </tr>
         </tbody>
     </table>
