@@ -17,10 +17,10 @@
 ---
 
 ## 📢 Latest Updates
-- **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥🔥
-- **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🔥🔥
-- 📦 Code, models, and datasets coming soon! 🚀
-- 🌟 **Featured**: GLaMM is now highlighted at the top on AK's [Daily Papers](https://huggingface.co/papers) page on HuggingFace! 🌟
+- **Dec-27-23**- GLaMM training and evaluation codes, pretrained checkpoints and GranD-f dataset are released [click for details](#-dive-deeper-inside-glamms-training-and-evaluation) 🔥🔥
+- **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥
+- **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🌟
+- 🌟 **Featured**: GLaMM is now highlighted at the top on AK's [Daily Papers](https://huggingface.co/papers?date=2023-11-07) page on HuggingFace! 🌟
 
 ---
 
@@ -39,6 +39,21 @@ Grounding Large Multimodal Model (GLaMM) is an end-to-end trained LMM which prov
 - **GranD Dataset Creation.** We create the GranD - Grounding-anything Dataset, a large-scale densely annotated dataset with 7.5M unique concepts grounded in 810M regions.
 
 ---
+
+## 🚀 Dive Deeper: Inside GLaMM's Training and Evaluation
+
+Delve into the core of GLaMM with our detailed guides on the model's Training and Evaluation methodologies.
+- [**Installation**](./docs/install.md): Provides guide to set up conda environment for running GLaMM training, evaluation and demo.
+
+- [**Datasets**](./docs/datasets.md): Provides detailed instructions to download and arrange datasets required for training and evaluation.
+
+- [**Model Zoo**](./docs/model_zoo.md): Provides downloadable links to all pretrained GLaMM checkpoints.
+
+- [**Training**](./docs/training.md): Provides instructions on how to train the GLaMM model for its various capabilities including Grounded Conversation Generation (GCG), Region-level captioning, and Referring Expression Segmentation.
+
+- [**Evaluation**](./docs/evaluation.md): Outlines the procedures for evaluating the GLaMM model using pretrained checkpoints, covering Grounded Conversation Generation (GCG), Region-level captioning, and Referring Expression Segmentation, as reported in our paper.
+
+- [**Demo**](./docs/offline_demo.md): Guides you through setting up a local demo to showcase GLaMM's functionalities.
 
 ## 👁️💬 GLaMM: Grounding Large Multimodal Model
 
