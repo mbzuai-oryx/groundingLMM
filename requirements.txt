@@ -17,6 +17,7 @@ click==8.1.7
 contourpy==1.2.0
 cycler==0.12.1
 deepspeed==0.12.5
+diffusers==0.22.3
 einops==0.4.1
 exceptiongroup==1.2.0
 fastapi==0.100.1
@@ -28,8 +29,8 @@ frozenlist==1.4.1
 fsspec==2023.12.2
 google-auth==2.25.2
 google-auth-oauthlib==1.0.0
-gradio==3.39.0
-gradio-client==0.7.3
+gradio==3.35.2
+gradio-client==0.2.7
 grpcio==1.60.0
 h11==0.14.0
 hjson==3.1.0

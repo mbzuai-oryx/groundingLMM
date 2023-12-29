@@ -6,7 +6,16 @@ Welcome to the GLaMM Demo! This guide will walk you through the process of setti
 - GPU with at least 24 GB of memory
 - Git and Git LFS installed
 - [GLaMM environment](../docs/install.md)
-
+- Install [gradio-box](https://github.com/ShoufaChen/gradio-box?tab=readme-ov-file#3-install-gradio): Follow the instructions below to install Gradio-Box.
+```bash
+git clone https://github.com/ShoufaChen/gradio-dev.git
+cd gradio-dev
+bash scripts/build_frontend.sh
+pip install -e .
+````
+- Version Requirements: Your installation should include the following specific versions: 
+  - Gradio version 3.35.2 
+  - Gradio-Client version 0.2.7
 ## Installation Steps
 
 ### 1. Clone the GLaMM Repository
@@ -35,7 +44,7 @@ For more information on the GLaMM FullScope model, visit [this link](https://hug
 
 Navigate to the directory where the repository was cloned and run the demo using Python. Replace path_to_GLaMM_FullScope_model with the actual path to the downloaded GLaMM FullScope model:
 ```bash
-python app.py --version "path_to_GLaMM_FullScope_model"
+python app.py --version "path/to/GLaMM_FullScope_model"
 
 ```
 
