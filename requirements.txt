@@ -77,8 +77,8 @@ pyasn1==0.5.1
 pyasn1-modules==0.3.0
 pycocoevalcap==1.2
 pycocotools==2.0.6
-pydantic==2.5.2
-pydantic-core==2.14.5
+pydantic==1.10.12
+pydantic-core==2.0.1
 pydub==0.25.1
 pynvml==11.5.0
 pyparsing==3.1.1
