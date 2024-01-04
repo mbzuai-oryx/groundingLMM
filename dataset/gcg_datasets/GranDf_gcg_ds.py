@@ -176,7 +176,7 @@ class GranDfDataset(GCGBaseDataset):
 class OpenPsgGCGDataset(GCGBaseDataset):
     def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
                  image_size=224, num_classes_per_sample=3, validation=False, random_sampling=True):
-        json_files = {'validation': "OpenPsgGCG_train.json", 'training': "OpenPsgGCG_val.json"}
+        json_files = {'validation': "OpenPsgGCG_val.json", 'training': "OpenPsgGCG_train.json"}
         json_path = json_files['validation'] if validation else json_files['training']
         image_dir = os.path.join("coco_2017", "train2017")
         mode = "Val" if validation else "Train"
@@ -190,7 +190,7 @@ class OpenPsgGCGDataset(GCGBaseDataset):
 class Flickr30kGCGDataset(GCGBaseDataset):
     def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
                  image_size=224, num_classes_per_sample=3, validation=False, random_sampling=True):
-        json_files = {'validation': "flickr_mergedGT_GCG_train.json", 'training': "flickr_mergedGT_GCG_val.json"}
+        json_files = {'validation': "flickr_mergedGT_GCG_val.json", 'training': "flickr_mergedGT_GCG_train.json"}
         json_path = json_files['validation'] if validation else json_files['training']
         image_dir = os.path.join("flikcr_30k", "train")
         mode = "Val" if validation else "Train"
@@ -278,7 +278,7 @@ class Flickr30kGCGDataset(GCGBaseDataset):
 class RefCOCOgGCGDataset(GCGBaseDataset):
     def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
                  image_size=224, num_classes_per_sample=3, validation=False, random_sampling=True):
-        json_files = {'validation': "RefCOCOg_GCG_train.json", 'training': "RefCOCOg_GCG_val.json"}
+        json_files = {'validation': "RefCOCOg_GCG_val.json", 'training': "RefCOCOg_GCG_train.json"}
         json_path = json_files['validation'] if validation else json_files['training']
         image_dir = os.path.join("coco_2014", "train2014")
         mode = "Val" if validation else "Train"

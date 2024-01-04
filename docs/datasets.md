@@ -226,6 +226,7 @@ Download links and structure:
 - [RefCOCOg](https://web.archive.org/web/20220413012904/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcocog.zip)
 - [RefCLEF](https://web.archive.org/web/20220413011817/https://bvisionweb1.cs.unc.edu/licheng/referit/data/refclef.zip)
 - RefCOCO images: `coco_2014` - COCO-2014 ([train2014](http://images.cocodataset.org/zips/train2014.zip))
+- For RefCLEF, you need images `[saiapr_tc-12](https://web.archive.org/web/20220515000000/http://bvisionweb1.cs.unc.edu/licheng/referit/data/images/saiapr_tc-12.zip)`
 
 Download the data from the source links, and arrange as follows:
 
@@ -253,7 +254,6 @@ Download links and structure:
 - Visual Genome: [train.json](https://datarelease.blob.core.windows.net/grit/VG_preprocessed_annotations/train.json), [images](https://nlp.stanford.edu/data/gqa/images.zip)
 - Flickr30k: Download the train images from the [Flickr30K webpage](https://shannon.cs.illinois.edu/DenotationGraph/) or use download from the following [link](https://drive.google.com/file/d/1iomUn-Ht0OBfieMuyoVqEFj5PEmXfQ0U/view?usp=drive_link).
 - RefCOCO images: `coco_2014` - COCO-2014 ([train2014](http://images.cocodataset.org/zips/train2014.zip))
-
 Download the data from the source links, and arrange as follows:
 
 ```
