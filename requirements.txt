@@ -113,10 +113,8 @@ tifffile==2023.12.9
 tokenizers==0.13.3
 tomli==2.0.1
 toolz==0.12.0
-torch==1.13.1+cu117
-torchvision==0.14.1+cu117
 tqdm==4.64.1
-transformers==4.28.0.dev0
+transformers@git+https://github.com/huggingface/transformers.git@cae78c46
 typing-extensions==4.9.0
 tzdata==2023.3
 uc-micro-py==1.0.2

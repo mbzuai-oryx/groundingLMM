@@ -7,13 +7,13 @@ conda activate glamm
 
 git clone https://github.com/mbzuai-oryx/groundingLMM.git
 cd groundingLMM
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install -r requirements.txt
 
 # Install mmcv
 git clone https://github.com/open-mmlab/mmcv
 cd mmcv
 git checkout v1.4.7
-cd mmcv-1.4.7
 MMCV_WITH_OPS=1 pip install -e .
 
 export PYTHONPATH="./:$PYTHONPATH"
