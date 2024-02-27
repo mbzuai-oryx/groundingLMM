@@ -1,4 +1,4 @@
-# GLaMM <img src="images/logos/face.png" height="40">: Pixel Grounding Large Multimodal Model
+# GLaMM <img src="images/logos/face.png" height="40">: Pixel Grounding Large Multimodal Model [CVPR 2024]
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
 </p>
@@ -17,6 +17,7 @@
 ---
 
 ## 📢 Latest Updates
+- **Feb-27-23**- We're thrilled to share that GLaMM has been accepted to CVPR 2024! 🎊
 - **Dec-27-23**- GLaMM training and evaluation codes, pretrained checkpoints and GranD-f dataset are released [click for details](#-dive-deeper-inside-glamms-training-and-evaluation) 🔥🔥
 - **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥
 - **Nov-07-23**: GLaMM paper is released [arxiv link](https://arxiv.org/abs/2311.03356). 🌟
@@ -171,8 +172,8 @@ GLaMM demonstrates its prowess in engaging in detailed, region-specific, and gro
   @article{hanoona2023GLaMM,
           title={GLaMM: Pixel Grounding Large Multimodal Model},
           author={Rasheed, Hanoona and Maaz, Muhammad and Shaji, Sahal and Shaker, Abdelrahman and Khan, Salman and Cholakkal, Hisham and Anwer, Rao M. and Xing, Eric and Yang, Ming-Hsuan and Khan, Fahad S.},
-          journal={ArXiv 2311.03356},
-          year={2023}
+          journal={The IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+          year={2024}
   }
 ```
 
