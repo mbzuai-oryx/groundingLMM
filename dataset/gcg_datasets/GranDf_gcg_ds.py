@@ -163,6 +163,7 @@ class GranDfDataset(GCGBaseDataset):
     """
     def __init__(self, dataset_dir, tokenizer, global_image_encoder, epoch_samples=8000, precision="fp32",
                  image_size=224, num_classes_per_sample=3, validation=False, random_sampling=True):
+        self.base_dir = os.path.join(dataset_dir, "GranDf")
         json_path = "GranDf_HA_GCG_train.json"
         image_dir = os.path.join(self.base_dir, "GranDf_HA_images", "train")
         mode = "Val" if validation else "Train"
