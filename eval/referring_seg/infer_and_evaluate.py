@@ -15,8 +15,8 @@ from model.GLaMM import GLaMMForCausalLM
 from model.llava import conversation as conversation_lib
 from dataset.dataset import custom_collate_fn
 from dataset.segm_datasets.RefCOCO_Segm_ds import ReferSegmDataset
-from utils.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, AverageMeter, Summary,
-                                 intersectionAndUnionGPU, dict_to_cuda)
+from tools.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, AverageMeter, Summary,
+                         intersectionAndUnionGPU, dict_to_cuda)
 
 
 def parse_args(args):

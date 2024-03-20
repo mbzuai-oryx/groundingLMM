@@ -1,5 +1,5 @@
 """
-train.py - GLaMM Training on Single Dataset Type
+train_ft.py - GLaMM Training on Single Dataset Type
 
 Trains the GLaMM model on one dataset type (Caption, Region, or Segmentation) at a time, iterating thoroughly through
 the chosen dataset. This targeted approach is optimal for specialized training on specific downstream task.
@@ -23,7 +23,7 @@ from model.GLaMM import GLaMMForCausalLM
 from model.llava import conversation as conversation_lib
 
 from dataset.dataset import custom_collate_fn
-from utils.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, AverageMeter, ProgressMeter, dict_to_cuda,
+from tools.utils import (DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, AverageMeter, ProgressMeter, dict_to_cuda,
                          Summary, intersectionAndUnionGPU)
 
 from dataset.gcg_datasets.GranDf_gcg_ds import GranDfDataset, OpenPsgGCGDataset, Flickr30kGCGDataset, RefCOCOgGCGDataset

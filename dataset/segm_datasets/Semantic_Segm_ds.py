@@ -11,7 +11,7 @@ from pycocotools.coco import COCO
 from transformers import CLIPImageProcessor
 from model.llava import conversation as conversation_lib
 from model.SAM.utils.transforms import ResizeLongestSide
-from utils.utils import DEFAULT_IMAGE_TOKEN
+from tools.utils import DEFAULT_IMAGE_TOKEN
 from dataset.utils.utils import ANSWER_LIST, SEG_QUESTIONS
 
 

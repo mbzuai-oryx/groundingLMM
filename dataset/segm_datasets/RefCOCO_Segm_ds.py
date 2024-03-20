@@ -10,7 +10,7 @@ from model.llava import conversation as conversation_lib
 from model.SAM.utils.transforms import ResizeLongestSide
 from dataset.utils.grefer import G_REFER
 from dataset.utils.refcoco_refer import REFER
-from utils.utils import DEFAULT_IMAGE_TOKEN
+from tools.utils import DEFAULT_IMAGE_TOKEN
 from dataset.utils.utils import ANSWER_LIST, SEG_QUESTIONS
 
 

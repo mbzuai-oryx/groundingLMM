@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from abc import ABC, abstractmethod
 
-from utils.utils import IGNORE_INDEX, IMAGE_TOKEN_INDEX
+from tools.utils import IGNORE_INDEX, IMAGE_TOKEN_INDEX
 from model.layers import MLVLROIQueryModule
 from model.llava.model.multimodal_encoder.builder import build_vision_tower
 
