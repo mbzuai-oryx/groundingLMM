@@ -1,0 +1,22 @@
+--extra-index-url https://download.pytorch.org/whl
+torch==1.9.0+cu111
+torchvision==0.10.0+cu111
+torchaudio==0.9.0
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.9/index.html
+detectron2==0.6
+transformers
+timm==0.4.12
+openai
+diffusers[torch]
+setuptools==59.5.0
+git+https://github.com/facebookresearch/segment-anything.git
+openmim
+mmcv
+spacy
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
+lvis
+scipy
+boto3
+jsonschema
+entrypoints
+nltk
