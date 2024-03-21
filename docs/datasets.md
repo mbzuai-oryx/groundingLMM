@@ -117,7 +117,7 @@ Overall, they must be arranged in the following format:
 ```
 
 ### 1) GranD-f Grounded Conversation Generation (GCG) Dataset
-The GranD-f datasets comprise four datasets: one high-quality human-annotated set proposed in our GLaMM paper, and 3 other datasets repurposed for the GCG task.
+The [GranD-f](https://grounding-anything.com/GranD-f) datasets comprise four datasets: one high-quality human-annotated set proposed in our GLaMM paper, and 3 other datasets repurposed for the GCG task.
 
 Download links and structure:
 - Annotations: [MBZUAI/GranD-f](https://huggingface.co/datasets/MBZUAI/GranD-f)

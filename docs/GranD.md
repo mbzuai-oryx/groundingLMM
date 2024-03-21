@@ -1,5 +1,5 @@
 # GranD - Grounding Anything Dataset 🚀
-The Grounding-anything Dataset (GranD) dataset offers densely annotated data, acquired through an automated annotation pipeline that leverages state-of-the-art (SOTA) vision and V-L models. This documentation covers how to download the GranD dataset and a guide to the automated annotation pipeline used to create GranD.  
+The [Grounding-anything](https://grounding-anything.com/) Dataset (GranD) dataset offers densely annotated data, acquired through an automated annotation pipeline that leverages state-of-the-art (SOTA) vision and V-L models. This documentation covers how to download the GranD dataset and a guide to the automated annotation pipeline used to create GranD.  
 
 ## Download GranD 📂
 - Annotations: [MBZUAI/GranD](https://huggingface.co/datasets/MBZUAI/GranD)

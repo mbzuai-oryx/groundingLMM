@@ -9,6 +9,7 @@
 #### **Mohamed bin Zayed University of AI, Australian National University, Aalto University, Carnegie Mellon University, University of California - Merced, Linköping University, Google Research**
 
 [![Demo](https://img.shields.io/badge/Online-Demo-red)](https://glamm.mbzuai-oryx.ngrok.app)
+[![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://grounding-anything.com/)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2311.03356)
 [![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)](GLaMM_Full_Paper.pdf)
@@ -17,6 +18,7 @@
 ---
 
 ## 📢 Latest Updates
+- **Mar-21-24**- We're excited to announce the release of [GranD](grounding-anything.com) dataset and the [GranD Automated Annotation Pipeline](docs/GranD.md#preparing-the-pretraining-annotations-from-grand-) 🔥
 - **Feb-27-23**- We're thrilled to share that GLaMM has been accepted to CVPR 2024! 🎊
 - **Dec-27-23**- GLaMM training and evaluation codes, pretrained checkpoints and GranD-f dataset are released [click for details](#-dive-deeper-inside-glamms-training-and-evaluation) 🔥🔥
 - **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥
@@ -48,6 +50,8 @@ Delve into the core of GLaMM with our detailed guides on the model's Training an
 
 - [**Datasets**](./docs/datasets.md): Provides detailed instructions to download and arrange datasets required for training and evaluation.
 
+- [**GranD**](./docs/GranD.md): Provides detailed instructions to download the GranD dataset and run the automated annotation pipeline.
+
 - [**Model Zoo**](./docs/model_zoo.md): Provides downloadable links to all pretrained GLaMM checkpoints.
 
 - [**Training**](./docs/training.md): Provides instructions on how to train the GLaMM model for its various capabilities including Grounded Conversation Generation (GCG), Region-level captioning, and Referring Expression Segmentation.
@@ -68,7 +72,7 @@ The components of GLaMM are cohesively designed to handle both textual and optio
 
 ## 🔍 Grounding-anything Dataset (GranD)
 
-GranD dataset, a large-scale dataset with automated annotation pipeline for detailed region-level understanding and segmentation masks. GranD comprises 7.5M unique concepts anchored in a total of 810M regions, each with a segmentation mask.
+The [Grounding-anything](https://grounding-anything.com/) GranD dataset, a large-scale dataset with automated annotation pipeline for detailed region-level understanding and segmentation masks. GranD comprises 7.5M unique concepts anchored in a total of 810M regions, each with a segmentation mask.
 
 <p align="center">
   <img src="images/glamm/dataset_pipeline.png" alt="Dataset Annotation Pipeline">
@@ -89,7 +93,7 @@ Below we present some examples of the GranD dataset.
 
 ## 📚 Building GranD-f for Grounded Conversation Generation
 
-GranD-f is designed for the GCG task, with about 214K image-grounded text pairs for higher-quality data in fine-tuning stage.
+The [GranD-f](https://grounding-anything.com/GranD-f) dataset is designed for the GCG task, with about 214K image-grounded text pairs for higher-quality data in fine-tuning stage.
 
 <p align="center">
   <img src="images/glamm/grand_f_samples.png" alt="GranD-f Dataset Sample">
