@@ -34,9 +34,9 @@ class CocoCapDataset(torch.utils.data.Dataset):
         self.random_sampling = random_sampling
 
         # Defining paths
+        mode = "val" if validation else "train"
         self.base_dir = os.path.join(dataset_dir, "coco_2017")
-        self.image_folder = os.path.join(self.base_dir, "train2017")
-        json_files = {'validation': "captions_val2017.json", 'training': "captions_train2017.json"}
+        self.image_folder = os.path.join(dataset_dir, f"coco_2017/{mode}2017")
         annotations_file = os.path.join(self.base_dir, "annotations",
                                         json_files['validation'] if validation else json_files['training'])
         self.data_infos = self._load_annotations(annotations_file)

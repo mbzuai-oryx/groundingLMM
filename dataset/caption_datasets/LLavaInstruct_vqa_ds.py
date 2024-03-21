@@ -31,11 +31,11 @@ class LLaVAInstructDataset(torch.utils.data.Dataset):
         self.random_sampling = random_sampling
 
         # Defining paths
+        mode = "val" if validation else "train"
         self.base_dir = os.path.join(dataset_dir, "llava_dataset")
-        self.image_folder = os.path.join(dataset_dir, "coco_2017/train2017")
+        self.image_folder = os.path.join(dataset_dir, f"coco_2017/{mode}2017")
         annotations_file = os.path.join(self.base_dir, "llava_instruct_150k.json")
         self.data_infos = self._load_annotations(annotations_file)
-        mode = "Val" if validation else "Train"
         print('\033[92m' + "----CAP-{}: LLaVA-Instruct VQA dataset initialized----".format(mode) + '\033[0m')
 
     def _load_annotations(self, ann_file):
