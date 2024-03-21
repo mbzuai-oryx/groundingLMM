@@ -11,6 +11,9 @@ from dataset.segm_datasets.RefCOCO_Segm_ds import ReferSegmDataset
 from dataset.gcg_datasets.GranDf_gcg_ds import GranDfDataset, OpenPsgGCGDataset, Flickr30kGCGDataset, RefCOCOgGCGDataset
 from dataset.region_datasets.RefCOCO_VG_Region_ds import (RefCocoRegDataset, RefCocoGRegDataset, RefCocoPRegDataset,
                                                           VisualGenomeRegDataset)
+from dataset.caption_datasets.GranD_ShortCaption_ds import GrandShortCaptionDataset
+from dataset.region_datasets.GranD_ReferringRegion_ds import GrandReferRegDataset
+from dataset.segm_datasets.GranD_ReferringSegm_ds import GrandReferSegmDataset
 from tools.utils import DEFAULT_IMAGE_TOKEN, IGNORE_INDEX, DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN
 
 
@@ -80,6 +83,7 @@ class HybridCapDataset(HybridDatasetBase):
                  dataset="CocoCap||LLaVaInstruct", sample_rate=[1, 1]):
         datasets_config = {"CocoCap": CocoCapDataset,
                            "LLaVaInstruct": LLaVAInstructDataset,
+                           "GrandCaptionDataset": GrandShortCaptionDataset,
                            # Add other dataset mappings here
                            }
         super().__init__(
@@ -97,6 +101,7 @@ class HybridRegDataset(HybridDatasetBase):
                            "RefCocoP_Reg": RefCocoPRegDataset,
                            "VisGen_Reg": VisualGenomeRegDataset,
                            "Flickr_Reg": Flickr30kRegDataset,
+                           "GrandRefer_Reg": GrandReferRegDataset,
                            # Add other dataset mappings here
                            }
         super().__init__(
@@ -120,6 +125,7 @@ class HybridSegDataset(HybridDatasetBase):
                            "RefCoco_GCG": RefCOCOgGCGDataset,
                            "GranDf_GCG": GranDfDataset,
                            "Flickr_GCG": Flickr30kGCGDataset,
+                           "GrandRefer_Segm": GrandReferSegmDataset,
                            # Add other dataset mappings here
                            }
         super().__init__(

@@ -61,12 +61,13 @@ def parse_args(args):
     parser.add_argument("--weight_segm", default=0.45, type=float, help="Sampling weight for segmentation data")
     parser.add_argument("--dataset_dir", default="./data", type=str)
     parser.add_argument("--seg_dataset", default="Semantic_Segm||Refer_Segm||RefCoco_GCG||PSG_GCG||Flickr_GCG||GranDf_GCG",
-                        type=str, help="Choose from: Semantic_Segm, Refer_Segm, RefCoco_GCG, GranDf_GCG, PSG_GCG, Flickr_GCG")
+                        type=str, help="Choose from: Semantic_Segm, Refer_Segm, RefCoco_GCG, GranDf_GCG, PSG_GCG, Flickr_GCG, GrandRefer_Segm")
     parser.add_argument("--segm_sample_rates", default="5,4,3,3,3,1", type=str)
     parser.add_argument("--reg_dataset", default="RefCoco_Reg||RefCocoG_Reg||RefCocoP_Reg||VisGen_Reg",
-                        type=str, help="Choose from: RefCoco_Reg, RefCocoG_Reg, RefCocoP_Reg, VisGen_Reg, Flickr_Reg")
+                        type=str, help="Choose from: RefCoco_Reg, RefCocoG_Reg, RefCocoP_Reg, VisGen_Reg, Flickr_Reg, GrandRefer_Reg")
     parser.add_argument("--reg_sample_rates", default="1,1,1,1", type=str)
-    parser.add_argument("--cap_dataset", default="CocoCap||LLaVaInstruct", type=str, help="Choose from: CocoCap, LLaVaInstruct")
+    parser.add_argument("--cap_dataset", default="CocoCap||LLaVaInstruct", type=str,
+                        help="Choose from: CocoCap, LLaVaInstruct, GrandCaptionDataset")
     parser.add_argument("--cap_sample_rates", default="1,1", type=str)
     parser.add_argument("--semantic_segm_data", default="ade20k||cocostuff||pascal_part||paco_lvis||mapillary", type=str)
     parser.add_argument("--refer_segm_data", default="refcoco||refcoco+||refcocog||refclef", type=str)
