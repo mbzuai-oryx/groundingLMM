@@ -87,10 +87,9 @@ class GrandShortCaptionDataset(torch.utils.data.Dataset):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
-        image = self.transform.apply_image(image)
-        image_resize = image.shape[:2]
-        # Prepare input for Grounding Image Encoder
-        grounding_enc_image = self.grounding_enc_processor(torch.from_numpy(image).permute(2, 0, 1).contiguous())
+        # Skip input for Grounding Image Encoder
+        grounding_enc_image = None
+        image_resize = None
         bboxes = None
 
         caption = ann_info["caption"]
@@ -98,7 +97,7 @@ class GrandShortCaptionDataset(torch.utils.data.Dataset):
         selected_labels = conversations
 
         masks = torch.rand(0, *image_resize)
-        label = torch.ones(image_resize) * self.IGNORE_LABEL
+        label = None
 
         assert len(conversations) == 1
 

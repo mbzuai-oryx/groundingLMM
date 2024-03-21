@@ -39,7 +39,7 @@ class RegionBaseDataset(torch.utils.data.Dataset):
         self.base_dir = os.path.join(dataset_dir, dataset_name)
         self.ann_file = os.path.join(self.base_dir, json_path)
         self.question_templates = question_templates
-        self.image_folder = os.path.join(dataset_dir, image_dir)
+        self.image_folder = os.path.join(self.base_dir, image_dir)
 
         self.data_infos = self._load_annotations(self.ann_file)
         self.data_infos = [self.data_infos[i] for i in self._filter_images(min_size=32)]
