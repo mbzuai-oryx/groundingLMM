@@ -8,6 +8,7 @@ To achieve all the capabilities of GLaMM, the following dataset types are used:
 4. Region-level Captioning Datasets (Expression Generation)
 5. Image Captioning
 6. Visual Question Answering
+7. GranD pretraining Datasets
 
 Overall, they must be arranged in the following format:
 ```
@@ -312,3 +313,15 @@ Download links and structure:
 ├── coco_2017
 │   ├── train2017
 ```
+
+### 7) GranD pretraining Datasets
+
+We convert the GranD dataset to multiple annotations in LMDB form for pretraining based on the tasks. For details on how to prepare the annotations, please refer to: [Pretraining Annotations from GranD](../docs/GranD.md#preparing-the-pretraining-annotations-from-grand-).
+
+- For image-level captioning:
+  - Short Captioning: [GrandShortCaptionDataset](dataset/caption_datasets/GranD_ShortCaption_ds.py)
+- For referring expression generation and referring expression segmentation:
+  - Region-level captioning (referring expression generation): [GrandReferRegDataset](../dataset/region_datasets/GranD_ReferringRegion_ds.py)
+  - Referring expression segmentation: [GrandReferSegmDataset](../dataset/segm_datasets/GranD_ReferringSegm_ds.py)
+
+
