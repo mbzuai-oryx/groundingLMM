@@ -9,7 +9,7 @@
 #### **Mohamed bin Zayed University of AI, Australian National University, Aalto University, Carnegie Mellon University, University of California - Merced, Linköping University, Google Research**
 
 [![Demo](https://img.shields.io/badge/Online-Demo-red)](https://glamm.mbzuai-oryx.ngrok.app)
-[![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://grounding-anything.com/)
+[![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://grounding-anything.com)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/groundingLMM)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2311.03356)
 [![Full Paper](https://img.shields.io/badge/Full_Paper-Read-0000FF.svg)](GLaMM_Full_Paper.pdf)
@@ -18,7 +18,7 @@
 ---
 
 ## 📢 Latest Updates
-- **Mar-21-24**- We're excited to announce the release of [GranD](grounding-anything.com) dataset and the [GranD Automated Annotation Pipeline](docs/GranD.md#preparing-the-pretraining-annotations-from-grand-) 🔥
+- **Mar-21-24**- We're excited to announce the release of [GranD](https://grounding-anything.com) dataset and the [GranD Automated Annotation Pipeline](docs/GranD.md#preparing-the-pretraining-annotations-from-grand-) 🔥
 - **Feb-27-23**- We're thrilled to share that GLaMM has been accepted to CVPR 2024! 🎊
 - **Dec-27-23**- GLaMM training and evaluation codes, pretrained checkpoints and GranD-f dataset are released [click for details](#-dive-deeper-inside-glamms-training-and-evaluation) 🔥🔥
 - **Nov-29-23**: GLaMM online interactive demo is released [demo link](https://glamm.mbzuai-oryx.ngrok.app). 🔥
