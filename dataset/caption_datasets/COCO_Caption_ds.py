@@ -109,15 +109,14 @@ class CocoCapDataset(torch.utils.data.Dataset):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
-        image = self.transform.apply_image(image)
-        image_resize = image.shape[:2]
-        # Prepare input for Grounding Image Encoder
-        grounding_enc_image = self.grounding_enc_processor(torch.from_numpy(image).permute(2, 0, 1).contiguous())
+        # Skip input for Grounding Image Encoder
+        grounding_enc_image = None
+        image_resize = None
 
         masks, bboxes = None, None
 
         questions, conversations = self.create_conversations(caption)
-        label = torch.full((grounding_enc_image.shape[1], grounding_enc_image.shape[2]), self.IGNORE_LABEL)
+        label = None
         selected_labels = [caption]
 
         return (image_path, global_enc_image, grounding_enc_image, bboxes, conversations, masks, label, image_resize,

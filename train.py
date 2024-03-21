@@ -548,14 +548,15 @@ def train(active_datasets, model, epoch, scheduler, writer, dataset_iters, args,
             # Prepare data and convert relevant tensors to bfloat16
             data_batch = dict_to_cuda(data_batch)
             for key in ["global_enc_images", "grounding_enc_images"]:
-                data_batch[key] = data_batch[key].bfloat16()
+                if data_batch[key] is not None:
+                    data_batch[key] = data_batch[key].bfloat16()
 
             output_dict = model(**data_batch)
 
             # Update training metrics
             for key, tracker in trackers.items():
                 if key in output_dict:
-                    tracker.update(output_dict[key].item(), data_batch["grounding_enc_images"].size(0))
+                    tracker.update(output_dict[key].item(), data_batch["global_enc_images"].size(0))
 
             model.backward(output_dict["loss"])
             model.step()
@@ -642,14 +643,15 @@ def validate_model_performance(validation_loader, training_model, current_epoch,
             # Prepare data and convert relevant tensors to bfloat16
             data_batch = dict_to_cuda(data_batch)
             for key in ["global_enc_images", "grounding_enc_images"]:
-                data_batch[key] = data_batch[key].bfloat16()
+                if data_batch[key] is not None:
+                    data_batch[key] = data_batch[key].bfloat16()
             torch.cuda.empty_cache()
             # Model inference without gradient tracking
             with torch.no_grad():
                 predictions = training_model(**data_batch)
             # Update performance metrics)
             for key, tracker in trackers.items():
-                tracker.update(predictions[key].item(), data_batch["grounding_enc_images"].size(0))
+                tracker.update(predictions[key].item(), data_batch["global_enc_images"].size(0))
 
         # Synchronize metrics across processes
         for tracker in trackers.values():

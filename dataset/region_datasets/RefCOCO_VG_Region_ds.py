@@ -162,10 +162,9 @@ class RegionBaseDataset(torch.utils.data.Dataset):
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
         post_h, post_w = global_enc_image.shape[1:3]
-        # Prepare input for Grounding Image Encoder
-        image = self.transform.apply_image(image)
-        image_resize = image.shape[:2]
-        grounding_enc_image = self.grounding_enc_processor(torch.from_numpy(image).permute(2, 0, 1).contiguous())
+        # Skip input for Grounding Image Encoder
+        grounding_enc_image = None
+        image_resize = None
         # Prepare input for Region Image Encoder
         bboxes, selected_labels = self.region_enc_processor((orig_h, orig_w), (post_h, post_w), data_bboxes, data_labels,
                                                             global_enc_image.device)
@@ -174,7 +173,7 @@ class RegionBaseDataset(torch.utils.data.Dataset):
         questions, conversations = self.create_conversations(
             selected_labels, question_templates=self.question_templates
             )
-        label = torch.ones(grounding_enc_image.shape[1], grounding_enc_image.shape[2]) * self.IGNORE_LABEL
+        label = None
 
         return (image_path, global_enc_image, grounding_enc_image, bboxes, conversations, masks, label, image_resize,
                 questions, selected_labels)

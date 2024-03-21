@@ -36,7 +36,7 @@ class LLaVAInstructDataset(torch.utils.data.Dataset):
         annotations_file = os.path.join(self.base_dir, "llava_instruct_150k.json")
         self.data_infos = self._load_annotations(annotations_file)
         mode = "Val" if validation else "Train"
-        print('\033[92m' + "----CAP-{}: LLaVA-Instruct VDQ dataset initialized----".format(mode) + '\033[0m')
+        print('\033[92m' + "----CAP-{}: LLaVA-Instruct VQA dataset initialized----".format(mode) + '\033[0m')
 
     def _load_annotations(self, ann_file):
         with open(ann_file, 'r') as f:
@@ -89,18 +89,17 @@ class LLaVAInstructDataset(torch.utils.data.Dataset):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Prepare input for Global Image Encoder
         global_enc_image = self.global_enc_processor.preprocess(image, return_tensors="pt")["pixel_values"][0]
-        image = self.transform.apply_image(image)
-        image_resize = image.shape[:2]
-        # Prepare input for Grounding Image Encoder
-        grounding_enc_image = self.grounding_enc_processor(torch.from_numpy(image).permute(2, 0, 1).contiguous())
+        # Skip input for Grounding Image Encoder
+        grounding_enc_image = None
+        image_resize = None
         bboxes = None
 
         conv_ann = ann_info["conversations"]
         questions, conversations = self.create_conversations(conv_ann)
         selected_labels = conversations
 
-        masks = torch.rand(0, *image_resize)
-        label = torch.ones(image_resize) * self.IGNORE_LABEL
+        masks = None
+        label = None
 
         assert len(conversations) == 1
 

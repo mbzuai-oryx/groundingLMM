@@ -182,13 +182,23 @@ def custom_collate_fn(batch, tokenizer=None, use_mm_start_end=True, inference=Fa
                 lambda x: x[:, :truncate_len], [input_ids, targets, attention_masks]
                 )
 
-    return {"image_paths": image_path_list, "global_enc_images": torch.stack(global_enc_image_list, dim=0),
-        "grounding_enc_images": torch.stack(grounding_enc_image_list, dim=0),
-        "bboxes": None if bboxes_list[0] is None else bboxes_list, "input_ids": input_ids, "labels": targets,
-        "attention_masks": attention_masks, "masks_list": masks_list, "label_list": label_list,
-        "resize_list": resize_list, "offset": torch.LongTensor(offset_list), "questions_list": questions_list,
-        "sampled_classes_list": selected_labels_list, "inference": inferences[0],
-        "conversation_list": conversation_list, }
+    return {
+        "image_paths": image_path_list,
+        "global_enc_images": torch.stack(global_enc_image_list, dim=0),
+        "grounding_enc_images": None if grounding_enc_image_list[0] is None else torch.stack(grounding_enc_image_list, dim=0),
+        "bboxes": None if bboxes_list[0] is None else bboxes_list,
+        "input_ids": input_ids,
+        "labels": targets,
+        "attention_masks": attention_masks,
+        "masks_list": None if masks_list[0] is None else masks_list,
+        "label_list": None if label_list[0] is None else label_list,
+        "resize_list": None if resize_list[0] is None else resize_list,
+        "offset": torch.LongTensor(offset_list),
+        "questions_list": questions_list,
+        "sampled_classes_list": selected_labels_list,
+        "inference": inferences[0],
+        "conversation_list": conversation_list,
+    }
 
 
 def _process_conversation(conversation, target, tokenizer, sep, sep2):

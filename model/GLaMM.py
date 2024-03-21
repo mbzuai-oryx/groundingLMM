@@ -134,12 +134,6 @@ class GLaMMForCausalLM(LlavaLlamaForCausalLM):
                       bboxes: torch.FloatTensor, input_ids: torch.LongTensor, labels: torch.LongTensor,
                       attention_masks: torch.LongTensor, offset: torch.LongTensor, masks_list: List[torch.FloatTensor],
                       label_list: List[torch.Tensor], resize_list: List[tuple], inference: bool = False, **kwargs, ):
-        # Extract grounding encoder image embeddings
-        image_embeddings = self.get_grounding_encoder_embs(grounding_enc_images)
-        assert image_embeddings.shape[0] == len(offset) - 1
-
-        # Create segmentation token mask
-        seg_token_mask = self._create_seg_token_mask(input_ids)
 
         # Handle inference or training paths
         if inference:
@@ -148,17 +142,26 @@ class GLaMMForCausalLM(LlavaLlamaForCausalLM):
             output, output_hidden_states = self._training_path(
                 global_enc_images, bboxes, input_ids, labels, attention_masks, offset
             )
+        if grounding_enc_images is not None:
+            # Extract grounding encoder image embeddings
+            image_embeddings = self.get_grounding_encoder_embs(grounding_enc_images)
+            assert image_embeddings.shape[0] == len(offset) - 1
 
-        # Process hidden states
-        hidden_states, pred_embeddings = self._process_hidden_states(output_hidden_states, seg_token_mask, offset)
+            # Create segmentation token mask
+            seg_token_mask = self._create_seg_token_mask(input_ids)
 
-        # Generate and post-process masks
-        pred_masks = self._generate_and_postprocess_masks(
-            pred_embeddings, image_embeddings, resize_list, label_list
-        )
+            # Process hidden states
+            hidden_states, pred_embeddings = self._process_hidden_states(output_hidden_states, seg_token_mask, offset)
 
-        if inference:
-            return {"pred_masks": pred_masks, "gt_masks": masks_list, }
+            # Generate and post-process masks
+            pred_masks = self._generate_and_postprocess_masks(
+                pred_embeddings, image_embeddings, resize_list, label_list
+            )
+
+            if inference:
+                return {"pred_masks": pred_masks, "gt_masks": masks_list, }
+        else:
+            pred_masks = None
 
         # Calculate losses
         return self._calculate_losses(pred_masks, masks_list, output)
@@ -252,24 +255,25 @@ class GLaMMForCausalLM(LlavaLlamaForCausalLM):
         mask_dice_loss = torch.tensor(0.0, device=ce_loss.device)
         num_masks = 0
 
-        # Iterate over batch and compute mask-related losses
-        for batch_idx, pred_mask in enumerate(pred_masks):
-            if pred_mask.numel() > 0:  # Ensure pred_mask is not empty
-                gt_mask = masks_list[batch_idx]
-                # Resize gt_mask to match pred_mask if needed
-                if gt_mask.shape[0] != pred_mask.shape[0]:
-                    gt_mask = gt_mask[:pred_mask.shape[0]]
+        if pred_masks:
+            # Iterate over batch and compute mask-related losses
+            for batch_idx, pred_mask in enumerate(pred_masks):
+                if pred_mask.numel() > 0:  # Ensure pred_mask is not empty
+                    gt_mask = masks_list[batch_idx]
+                    # Resize gt_mask to match pred_mask if needed
+                    if gt_mask.shape[0] != pred_mask.shape[0]:
+                        gt_mask = gt_mask[:pred_mask.shape[0]]
 
-                assert gt_mask.shape[0] == pred_mask.shape[
-                    0], f"Shape mismatch: gt_mask {gt_mask.shape}, pred_mask {pred_mask.shape}"
+                    assert gt_mask.shape[0] == pred_mask.shape[
+                        0], f"Shape mismatch: gt_mask {gt_mask.shape}, pred_mask {pred_mask.shape}"
 
-                # Compute Binary Cross-Entropy Loss
-                mask_bce_loss += (compute_sigmoid_cross_entropy(pred_mask, gt_mask, mask_count=gt_mask.shape[0]) *
-                                  gt_mask.shape[0])
-                # Compute Dice Loss
-                mask_dice_loss += (
-                        calculate_dice_loss(pred_mask, gt_mask, mask_count=gt_mask.shape[0]) * gt_mask.shape[0])
-                num_masks += gt_mask.shape[0]
+                    # Compute Binary Cross-Entropy Loss
+                    mask_bce_loss += (compute_sigmoid_cross_entropy(pred_mask, gt_mask, mask_count=gt_mask.shape[0]) *
+                                      gt_mask.shape[0])
+                    # Compute Dice Loss
+                    mask_dice_loss += (
+                            calculate_dice_loss(pred_mask, gt_mask, mask_count=gt_mask.shape[0]) * gt_mask.shape[0])
+                    num_masks += gt_mask.shape[0]
 
         # Normalize the losses
         mask_bce_loss = self.bce_loss_weight * mask_bce_loss / (num_masks + 1e-8)
