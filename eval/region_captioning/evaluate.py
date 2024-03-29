@@ -25,7 +25,7 @@ def main():
     # Merge and load the results files
     all_results = []
     for result_file in os.listdir(args.results_dir):
-        all_results = json.load(open(f"{args.results_dir}/{result_file}", "r"))
+        all_results += json.load(open(f"{args.results_dir}/{result_file}", "r"))
     merged_file_path = f"{args.results_dir}/merged.json"
     with open(merged_file_path, 'w') as f:
         json.dump(all_results, f)
