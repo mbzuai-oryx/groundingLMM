@@ -62,7 +62,7 @@ run_in_env grand_env_1 pushd level_1_inference/4_co_detr
 popd
 
 # 5. Object Detection using EVA-02
-run_in_env_targeted grand_env_4pushd level_1_inference/5_eva_02
+run_in_env_targeted grand_env_4 pushd level_1_inference/5_eva_02
     python -m torch.distributed.launch --nproc_per_node="$NUM_GPUs" --master_port="$MASTER_PORT" --use_env infer.py --image_dir_path "$IMG_DIR" --output_dir_path "$PRED_DIR" --model_name 'eva-02-01'
     python -m torch.distributed.launch --nproc_per_node="$NUM_GPUs" --master_port="$MASTER_PORT" --use_env infer.py --image_dir_path "$IMG_DIR" --output_dir_path "$PRED_DIR" --model_name 'eva-02-02'
 popd
@@ -73,7 +73,7 @@ run_in_env grand_env_1 pushd level_1_inference/6_owl_vit
 popd
 
 # 7. Open Vocabulary Detection using POMP
-run_in_env grand_env_4pushd level_1_inference/7_pomp
+run_in_env grand_env_4 pushd level_1_inference/7_pomp
     python launch_pomp_multi_gpu_inference.py --image_dir_path "$IMG_DIR" --output_dir_path "$PRED_DIR" --tags_dir_path "$PRED_DIR" --gpu_ids "$GPU_IDs"
 popd
 
@@ -103,12 +103,12 @@ run_in_env_targeted grand_env_3 pushd level_2_inference/1_blip-2
 popd
 
 # 12. Captioning using LLaVA
-run_in_env grand_env_6pushd level_2_inference/2_llava
+run_in_env grand_env_6 pushd level_2_inference/2_llava
     python infer.py --image_dir_path "$IMG_DIR" --output_dir_path "$PRED_DIR" --gpu_ids "$GPU_IDs" --llava_model_path "$CKPT_DIR/llava-v1-0719-336px-lora-merge-vicuna-13b-v1.3"
 popd
 
 # 13. Grounding using MDETR
-run_in_env_targeted grand_env_8 pushd level_2_inference/3_mdetr
+run_in_env_targeted grand_env_7 pushd level_2_inference/3_mdetr
     python -m torch.distributed.launch --nproc_per_node="$NUM_GPUs" --master_port="$MASTER_PORT" --use_env infer.py --image_dir_path "$IMG_DIR" --output_dir_path "$PRED_DIR" --blip2_pred_path "$PRED_DIR/blip2"  --llava_pred_path "$PRED_DIR/llava"
 popd
 
@@ -128,7 +128,7 @@ run_in_env grand_env_8 pushd level_2_inference/4_gpt4roi/GPT4RoI
 popd
 
 # 16. Label Assignment using EVA-CLIP
-run_in_env_targeted grand_env_4pushd level_2_inference/5_label_assignment
+run_in_env_targeted grand_env_4 pushd level_2_inference/5_label_assignment
     python -m torch.distributed.launch --nproc_per_node="$NUM_GPUs" --master_port="$MASTER_PORT" --use_env infer.py --image_dir_path "$IMG_DIR" --level_2_dir_path "$PRED_DIR/level-2-processed_gpt4roi" --output_dir_path "$PRED_DIR/level-2-processed_eva_clip"
 popd
 
