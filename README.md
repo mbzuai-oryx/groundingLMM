@@ -16,6 +16,7 @@
 ---
 
 ## 📢 Latest Updates
+- **Nov-07-24**: VideoGLaMM is released. It extends the grounded conversation generation task for videos 🎥 ! Check it out at [VideoGLaMM](https://mbzuai-oryx.github.io/VideoGLaMM/) 🔥🔥
 - **Mar-21-24**- We're excited to announce the release of [GranD](https://grounding-anything.com) dataset and the [GranD Automated Annotation Pipeline](docs/GranD.md#preparing-the-pretraining-annotations-from-grand-) 🔥
 - **Feb-27-23**- We're thrilled to share that GLaMM has been accepted to CVPR 2024! 🎊
 - **Dec-27-23**- GLaMM training and evaluation codes, pretrained checkpoints and GranD-f dataset are released [click for details](#-dive-deeper-inside-glamms-training-and-evaluation) 🔥🔥
