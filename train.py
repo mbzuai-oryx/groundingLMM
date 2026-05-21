@@ -98,6 +98,7 @@ def parse_args(args):
     parser.add_argument("--train_mask_decoder", action="store_true", default=True)
     parser.add_argument("--use_mm_start_end", action="store_true", default=True)
     parser.add_argument("--print_freq", default=1, type=int)
+    parser.add_argument("--seed", default=42, type=int)
     parser.add_argument("--start_epoch", default=0, type=int)
     parser.add_argument("--local_rank", default=0, type=int, help="node rank")
 
@@ -455,14 +456,15 @@ def main(args):
         cur_val_loss = validate_model_performance(val_loader, model_engine, 0, writer, args)[0]
         exit()
 
-    epoch_seeds = [random.randint(0, 100000) for _ in range(args.epochs)]
     dataset_choices = [idx for idx, _ in enumerate(active_dataloaders)]
 
     best_giou, best_ciou, best_val_loss = 0.0, 0.0, np.inf
     for epoch in range(args.start_epoch, args.epochs):
-        random.seed(epoch_seeds[epoch])
-
-        step_choices = random.choices(dataset_choices, weights=weights, k=args.steps_per_epoch)
+        # Keep the dataset schedule identical across ranks. Different dataset
+        # types exercise different model branches, so per-rank schedules can
+        # desynchronize ZeRO gradient communication during backward.
+        epoch_rng = random.Random(args.seed + epoch)
+        step_choices = epoch_rng.choices(dataset_choices, weights=weights, k=args.steps_per_epoch)
 
         dataset_iters = train(
             active_dataloaders, model_engine, epoch, scheduler, writer, dataset_iters, args, step_choices
