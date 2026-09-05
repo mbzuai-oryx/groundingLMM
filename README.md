@@ -186,6 +186,6 @@ We are thankful to LLaVA, GPT4ROI, and LISA for releasing their models and code 
 
 
 ---
-[<img src="images/logos/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.com)
+[<img src="images/logos/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.net)
 [<img src="images/logos/Oryx_logo.png" width="100" height="100">](https://github.com/mbzuai-oryx)
 [<img src="images/logos/MBZUAI_logo.png" width="360" height="85">](https://mbzuai.ac.ae)
